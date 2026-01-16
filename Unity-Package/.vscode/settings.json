@@ -51,5 +51,9 @@
         "temp/": true,
         "Temp/": true
     },
-    "dotnet.defaultSolution": "Unity-Package.sln"
+    "dotnet.defaultSolution": "Unity-Package.slnx",
+    "cSpell.words": [
+        "ivanmurzak",
+        "particlesystem"
+    ]
 }

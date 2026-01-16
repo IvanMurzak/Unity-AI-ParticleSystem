@@ -2,18 +2,19 @@
     "name": "com.ivanmurzak.unity.mcp.particlesystem",
     "displayName": "AI Particle System",
     "author": {
-        "name": "Your_Name",
-        "url": "https://github.com/Your_Name"
+        "name": "Ivan Murzak",
+        "url": "https://github.com/IvanMurzak"
     },
     "keywords": [
-        "keyword1",
-        "keyword2"
+        "particlesystem",
+        "unity"
     ],
     "version": "1.0.0",
     "unity": "2022.3",
     "description": "Some description",
     "dependencies": {
-        "com.ivanmurzak.unity.mcp": "0.39.0"
+        "com.ivanmurzak.unity.mcp": "0.39.0",
+        "com.unity.modules.particlesystem": "1.0.0"
     },
     "scopedRegistries": [
         {
