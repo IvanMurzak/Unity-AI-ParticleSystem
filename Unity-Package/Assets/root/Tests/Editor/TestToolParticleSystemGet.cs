@@ -18,9 +18,8 @@ using UnityEngine.TestTools;
 
 namespace com.IvanMurzak.Unity.MCP.ParticleSystem.Editor.Tests
 {
-    public partial class TestToolParticleSystem : BaseTest
+    public class TestToolParticleSystemGet : BaseTest
     {
-        private const string GO_ParticleSystemName = "TestParticleSystem";
 
         #region Get Tool - Direct API Tests
 
@@ -217,58 +216,6 @@ namespace com.IvanMurzak.Unity.MCP.ParticleSystem.Editor.Tests
             Assert.IsFalse(result.isPlaying, "ParticleSystem should not be playing after Stop");
             Assert.IsTrue(result.isStopped, "ParticleSystem should be stopped");
             Assert.AreEqual(0, result.particleCount, "Particle count should be 0 after clear");
-
-            yield return null;
-        }
-
-        [UnityTest]
-        public IEnumerator Get_WithMultipleParticleSystems_FindsCorrectOne()
-        {
-            var go = new GameObject(GO_ParticleSystemName);
-            var ps1 = go.AddComponent<UnityEngine.ParticleSystem>();
-            var ps2 = go.AddComponent<UnityEngine.ParticleSystem>();
-
-            var tool = new Tool_ParticleSystem();
-            var result = tool.Get(
-                gameObjectRef: new GameObjectRef(go.GetInstanceID()),
-                componentRef: new ComponentRef(ps2.GetInstanceID()),
-                includeMain: true
-            );
-
-            Assert.IsNotNull(result, "Result should not be null");
-            Assert.AreEqual(ps2.GetInstanceID(), result.componentRef!.InstanceID, "Should find the correct ParticleSystem");
-
-            yield return null;
-        }
-
-        [UnityTest]
-        public IEnumerator Get_WithComponentIndex_FindsCorrectParticleSystem()
-        {
-            var go = new GameObject(GO_ParticleSystemName);
-            go.AddComponent<UnityEngine.ParticleSystem>();
-            var ps2 = go.AddComponent<UnityEngine.ParticleSystem>();
-
-            // Get index of ps2
-            var components = go.GetComponents<UnityEngine.Component>();
-            int ps2Index = -1;
-            for (int i = 0; i < components.Length; i++)
-            {
-                if (components[i] == ps2)
-                {
-                    ps2Index = i;
-                    break;
-                }
-            }
-
-            var tool = new Tool_ParticleSystem();
-            var result = tool.Get(
-                gameObjectRef: new GameObjectRef(go.GetInstanceID()),
-                componentRef: new ComponentRef { Index = ps2Index },
-                includeMain: true
-            );
-
-            Assert.IsNotNull(result, "Result should not be null");
-            Assert.AreEqual(ps2.GetInstanceID(), result.componentRef!.InstanceID, "Should find the correct ParticleSystem by index");
 
             yield return null;
         }

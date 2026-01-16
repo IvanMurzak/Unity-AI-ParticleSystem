@@ -20,6 +20,8 @@ namespace com.IvanMurzak.Unity.MCP.ParticleSystem.Editor.Tests
 {
     public class BaseTest : com.IvanMurzak.Unity.MCP.Editor.Tests.BaseTest
     {
+        protected const string GO_ParticleSystemName = "TestParticleSystem";
+
         protected virtual ResponseData<ResponseCallTool> RunToolAllowWarnings(string toolName, string json)
         {
             var reflector = McpPlugin.McpPlugin.Instance!.McpManager.Reflector;

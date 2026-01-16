@@ -19,7 +19,7 @@ using UnityEngine.TestTools;
 
 namespace com.IvanMurzak.Unity.MCP.ParticleSystem.Editor.Tests
 {
-    public partial class TestToolParticleSystem
+    public class TestToolParticleSystemModify : BaseTest
     {
         #region Modify Tool - Direct API Tests
 
