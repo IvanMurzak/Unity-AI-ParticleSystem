@@ -1,6 +1,6 @@
 {
   "dependencies": {
-    "YOUR_PACKAGE_ID_LOWERCASE": "file:./../../../Unity-Package/Assets/root",
+    "com.ivanmurzak.unity.mcp.particlesystem": "file:./../../../Unity-Package/Assets/root",
     "com.unity.feature.development": "1.0.2",
     "com.unity.test-framework": "1.3.9",
     "com.unity.ugui": "2.0.0",

@@ -15,7 +15,7 @@ using UnityEditor;
 using UnityEngine;
 using UnityEngine.TestTools;
 
-namespace YOUR_PACKAGE_ID.Editor.Tests
+namespace com.IvanMurzak.Unity.MCP.ParticleSystem.Editor.Tests
 {
     public partial class DemoTest
     {
