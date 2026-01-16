@@ -13,7 +13,7 @@
 
 </div>
 
-<img width="100%" alt="Stats" src="https://github.com/IvanMurzak/Unity-AI-ParticleSystem/raw/main/docs/img/particle-system-glitch.gif"/>
+<img width="100%" alt="Promo" src="https://github.com/IvanMurzak/Unity-AI-ParticleSystem/raw/main/docs/img/particle-system-glitch.gif"/>
 
 AI-powered tools for Unity ParticleSystem workflow. Inspect and modify ParticleSystem components directly through natural language commands. Configure emission settings, shape modules, velocity curves, color gradients, and all 24 particle system modules without manual inspector navigation. Ideal for rapid prototyping, procedural effects generation, and streamlining complex particle setups. Built on top of the [AI Game Developer](https://github.com/IvanMurzak/Unity-MCP) platform.
 
