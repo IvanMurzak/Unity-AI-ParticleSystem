@@ -184,7 +184,7 @@ namespace com.IvanMurzak.Unity.MCP.ParticleSystem.Editor.API
                     var mainModule = ps.main;
                     response.main = reflector.Serialize(
                         obj: mainModule,
-                        name: "main",
+                        name: nameof(ps.main),
                         recursive: deepSerialization,
                         logger: logger
                     );
@@ -195,7 +195,7 @@ namespace com.IvanMurzak.Unity.MCP.ParticleSystem.Editor.API
                     var emissionModule = ps.emission;
                     response.emission = reflector.Serialize(
                         obj: emissionModule,
-                        name: "emission",
+                        name: nameof(ps.emission),
                         recursive: deepSerialization,
                         logger: logger
                     );
@@ -206,7 +206,7 @@ namespace com.IvanMurzak.Unity.MCP.ParticleSystem.Editor.API
                     var shapeModule = ps.shape;
                     response.shape = reflector.Serialize(
                         obj: shapeModule,
-                        name: "shape",
+                        name: nameof(ps.shape),
                         recursive: deepSerialization,
                         logger: logger
                     );
@@ -217,7 +217,7 @@ namespace com.IvanMurzak.Unity.MCP.ParticleSystem.Editor.API
                     var velocityModule = ps.velocityOverLifetime;
                     response.velocityOverLifetime = reflector.Serialize(
                         obj: velocityModule,
-                        name: "velocityOverLifetime",
+                        name: nameof(ps.velocityOverLifetime),
                         recursive: deepSerialization,
                         logger: logger
                     );
@@ -228,7 +228,7 @@ namespace com.IvanMurzak.Unity.MCP.ParticleSystem.Editor.API
                     var limitVelocityModule = ps.limitVelocityOverLifetime;
                     response.limitVelocityOverLifetime = reflector.Serialize(
                         obj: limitVelocityModule,
-                        name: "limitVelocityOverLifetime",
+                        name: nameof(ps.limitVelocityOverLifetime),
                         recursive: deepSerialization,
                         logger: logger
                     );
@@ -239,7 +239,7 @@ namespace com.IvanMurzak.Unity.MCP.ParticleSystem.Editor.API
                     var inheritVelocityModule = ps.inheritVelocity;
                     response.inheritVelocity = reflector.Serialize(
                         obj: inheritVelocityModule,
-                        name: "inheritVelocity",
+                        name: nameof(ps.inheritVelocity),
                         recursive: deepSerialization,
                         logger: logger
                     );
@@ -250,7 +250,7 @@ namespace com.IvanMurzak.Unity.MCP.ParticleSystem.Editor.API
                     var lifetimeByEmitterSpeedModule = ps.lifetimeByEmitterSpeed;
                     response.lifetimeByEmitterSpeed = reflector.Serialize(
                         obj: lifetimeByEmitterSpeedModule,
-                        name: "lifetimeByEmitterSpeed",
+                        name: nameof(ps.lifetimeByEmitterSpeed),
                         recursive: deepSerialization,
                         logger: logger
                     );
@@ -261,7 +261,7 @@ namespace com.IvanMurzak.Unity.MCP.ParticleSystem.Editor.API
                     var forceModule = ps.forceOverLifetime;
                     response.forceOverLifetime = reflector.Serialize(
                         obj: forceModule,
-                        name: "forceOverLifetime",
+                        name: nameof(ps.forceOverLifetime),
                         recursive: deepSerialization,
                         logger: logger
                     );
@@ -272,7 +272,7 @@ namespace com.IvanMurzak.Unity.MCP.ParticleSystem.Editor.API
                     var colorModule = ps.colorOverLifetime;
                     response.colorOverLifetime = reflector.Serialize(
                         obj: colorModule,
-                        name: "colorOverLifetime",
+                        name: nameof(ps.colorOverLifetime),
                         recursive: deepSerialization,
                         logger: logger
                     );
@@ -283,7 +283,7 @@ namespace com.IvanMurzak.Unity.MCP.ParticleSystem.Editor.API
                     var colorBySpeedModule = ps.colorBySpeed;
                     response.colorBySpeed = reflector.Serialize(
                         obj: colorBySpeedModule,
-                        name: "colorBySpeed",
+                        name: nameof(ps.colorBySpeed),
                         recursive: deepSerialization,
                         logger: logger
                     );
@@ -294,7 +294,7 @@ namespace com.IvanMurzak.Unity.MCP.ParticleSystem.Editor.API
                     var sizeModule = ps.sizeOverLifetime;
                     response.sizeOverLifetime = reflector.Serialize(
                         obj: sizeModule,
-                        name: "sizeOverLifetime",
+                        name: nameof(ps.sizeOverLifetime),
                         recursive: deepSerialization,
                         logger: logger
                     );
@@ -305,7 +305,7 @@ namespace com.IvanMurzak.Unity.MCP.ParticleSystem.Editor.API
                     var sizeBySpeedModule = ps.sizeBySpeed;
                     response.sizeBySpeed = reflector.Serialize(
                         obj: sizeBySpeedModule,
-                        name: "sizeBySpeed",
+                        name: nameof(ps.sizeBySpeed),
                         recursive: deepSerialization,
                         logger: logger
                     );
@@ -316,7 +316,7 @@ namespace com.IvanMurzak.Unity.MCP.ParticleSystem.Editor.API
                     var rotationModule = ps.rotationOverLifetime;
                     response.rotationOverLifetime = reflector.Serialize(
                         obj: rotationModule,
-                        name: "rotationOverLifetime",
+                        name: nameof(ps.rotationOverLifetime),
                         recursive: deepSerialization,
                         logger: logger
                     );
@@ -327,7 +327,7 @@ namespace com.IvanMurzak.Unity.MCP.ParticleSystem.Editor.API
                     var rotationBySpeedModule = ps.rotationBySpeed;
                     response.rotationBySpeed = reflector.Serialize(
                         obj: rotationBySpeedModule,
-                        name: "rotationBySpeed",
+                        name: nameof(ps.rotationBySpeed),
                         recursive: deepSerialization,
                         logger: logger
                     );
@@ -338,7 +338,7 @@ namespace com.IvanMurzak.Unity.MCP.ParticleSystem.Editor.API
                     var externalForcesModule = ps.externalForces;
                     response.externalForces = reflector.Serialize(
                         obj: externalForcesModule,
-                        name: "externalForces",
+                        name: nameof(ps.externalForces),
                         recursive: deepSerialization,
                         logger: logger
                     );
@@ -349,7 +349,7 @@ namespace com.IvanMurzak.Unity.MCP.ParticleSystem.Editor.API
                     var noiseModule = ps.noise;
                     response.noise = reflector.Serialize(
                         obj: noiseModule,
-                        name: "noise",
+                        name: nameof(ps.noise),
                         recursive: deepSerialization,
                         logger: logger
                     );
@@ -360,7 +360,7 @@ namespace com.IvanMurzak.Unity.MCP.ParticleSystem.Editor.API
                     var collisionModule = ps.collision;
                     response.collision = reflector.Serialize(
                         obj: collisionModule,
-                        name: "collision",
+                        name: nameof(ps.collision),
                         recursive: deepSerialization,
                         logger: logger
                     );
@@ -371,7 +371,7 @@ namespace com.IvanMurzak.Unity.MCP.ParticleSystem.Editor.API
                     var triggerModule = ps.trigger;
                     response.trigger = reflector.Serialize(
                         obj: triggerModule,
-                        name: "trigger",
+                        name: nameof(ps.trigger),
                         recursive: deepSerialization,
                         logger: logger
                     );
@@ -382,7 +382,7 @@ namespace com.IvanMurzak.Unity.MCP.ParticleSystem.Editor.API
                     var subEmittersModule = ps.subEmitters;
                     response.subEmitters = reflector.Serialize(
                         obj: subEmittersModule,
-                        name: "subEmitters",
+                        name: nameof(ps.subEmitters),
                         recursive: deepSerialization,
                         logger: logger
                     );
@@ -393,7 +393,7 @@ namespace com.IvanMurzak.Unity.MCP.ParticleSystem.Editor.API
                     var textureSheetModule = ps.textureSheetAnimation;
                     response.textureSheetAnimation = reflector.Serialize(
                         obj: textureSheetModule,
-                        name: "textureSheetAnimation",
+                        name: nameof(ps.textureSheetAnimation),
                         recursive: deepSerialization,
                         logger: logger
                     );
@@ -404,7 +404,7 @@ namespace com.IvanMurzak.Unity.MCP.ParticleSystem.Editor.API
                     var lightsModule = ps.lights;
                     response.lights = reflector.Serialize(
                         obj: lightsModule,
-                        name: "lights",
+                        name: nameof(ps.lights),
                         recursive: deepSerialization,
                         logger: logger
                     );
@@ -415,7 +415,7 @@ namespace com.IvanMurzak.Unity.MCP.ParticleSystem.Editor.API
                     var trailsModule = ps.trails;
                     response.trails = reflector.Serialize(
                         obj: trailsModule,
-                        name: "trails",
+                        name: nameof(ps.trails),
                         recursive: deepSerialization,
                         logger: logger
                     );
@@ -426,7 +426,7 @@ namespace com.IvanMurzak.Unity.MCP.ParticleSystem.Editor.API
                     var customDataModule = ps.customData;
                     response.customData = reflector.Serialize(
                         obj: customDataModule,
-                        name: "customData",
+                        name: nameof(ps.customData),
                         recursive: deepSerialization,
                         logger: logger
                     );
@@ -439,7 +439,7 @@ namespace com.IvanMurzak.Unity.MCP.ParticleSystem.Editor.API
                     {
                         response.renderer = reflector.Serialize(
                             obj: rendererComponent,
-                            name: "renderer",
+                            name: nameof(response.renderer),
                             recursive: deepSerialization,
                             logger: logger
                         );

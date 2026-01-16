@@ -2,6 +2,14 @@
   "logLevel": 3,
   "tools": [
     {
+      "name": "particlesystem-get",
+      "enabled": true
+    },
+    {
+      "name": "particlesystem-modify",
+      "enabled": true
+    },
+    {
       "name": "assets-copy",
       "enabled": true
     },
@@ -392,5 +400,5 @@
   ],
   "host": "http://localhost:53451",
   "timeoutMs": 10000,
-  "keepConnected": false
+  "keepConnected": true
 }
