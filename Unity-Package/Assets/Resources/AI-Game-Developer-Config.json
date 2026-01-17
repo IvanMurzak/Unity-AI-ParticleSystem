@@ -2,14 +2,6 @@
   "logLevel": 3,
   "tools": [
     {
-      "name": "particlesystem-get",
-      "enabled": true
-    },
-    {
-      "name": "particlesystem-modify",
-      "enabled": true
-    },
-    {
       "name": "assets-copy",
       "enabled": true
     },
@@ -23,6 +15,10 @@
     },
     {
       "name": "assets-find",
+      "enabled": true
+    },
+    {
+      "name": "assets-find-built-in",
       "enabled": true
     },
     {
@@ -203,6 +199,14 @@
     },
     {
       "name": "tests-run",
+      "enabled": true
+    },
+    {
+      "name": "particlesystem-get",
+      "enabled": true
+    },
+    {
+      "name": "particlesystem-modify",
       "enabled": true
     }
   ],
@@ -400,5 +404,5 @@
   ],
   "host": "http://localhost:53451",
   "timeoutMs": 10000,
-  "keepConnected": true
+  "keepConnected": false
 }
