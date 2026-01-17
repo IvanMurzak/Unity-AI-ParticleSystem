@@ -34,11 +34,13 @@ namespace com.IvanMurzak.Unity.MCP.ParticleSystem.Editor.Tests
             var newDuration = 10.0f;
 
             // Create the main module diff with new duration
+            // Note: Pass null as value to avoid serializing all module properties.
+            // Only add the specific properties we want to modify.
             var mainDiff = SerializedMember.FromValue(
                     reflector: reflector,
                     name: nameof(ps.main),
                     type: typeof(UnityEngine.ParticleSystem.MainModule),
-                    value: mainModule)
+                    value: null)
                 .AddProperty(SerializedMember.FromValue(
                     reflector: reflector,
                     name: nameof(mainModule.duration),
@@ -71,7 +73,7 @@ namespace com.IvanMurzak.Unity.MCP.ParticleSystem.Editor.Tests
                     reflector: reflector,
                     name: nameof(ps.main),
                     type: typeof(UnityEngine.ParticleSystem.MainModule),
-                    value: mainModule)
+                    value: null)
                 .AddProperty(SerializedMember.FromValue(
                     reflector: reflector,
                     name: nameof(mainModule.maxParticles),
@@ -105,7 +107,7 @@ namespace com.IvanMurzak.Unity.MCP.ParticleSystem.Editor.Tests
                     reflector: reflector,
                     name: nameof(ps.main),
                     type: typeof(UnityEngine.ParticleSystem.MainModule),
-                    value: mainModule)
+                    value: null)
                 .AddProperty(SerializedMember.FromValue(
                     reflector: reflector,
                     name: nameof(mainModule.loop),
@@ -139,7 +141,7 @@ namespace com.IvanMurzak.Unity.MCP.ParticleSystem.Editor.Tests
                     reflector: reflector,
                     name: nameof(ps.emission),
                     type: typeof(UnityEngine.ParticleSystem.EmissionModule),
-                    value: emissionModule)
+                    value: null)
                 .AddProperty(SerializedMember.FromValue(
                     reflector: reflector,
                     name: nameof(emissionModule.enabled),
@@ -173,7 +175,7 @@ namespace com.IvanMurzak.Unity.MCP.ParticleSystem.Editor.Tests
                     reflector: reflector,
                     name: nameof(ps.shape),
                     type: typeof(UnityEngine.ParticleSystem.ShapeModule),
-                    value: shapeModule)
+                    value: null)
                 .AddProperty(SerializedMember.FromValue(
                     reflector: reflector,
                     name: nameof(shapeModule.enabled),
@@ -206,7 +208,7 @@ namespace com.IvanMurzak.Unity.MCP.ParticleSystem.Editor.Tests
                     reflector: reflector,
                     name: nameof(ps.shape),
                     type: typeof(UnityEngine.ParticleSystem.ShapeModule),
-                    value: shapeModule)
+                    value: null)
                 .AddProperty(SerializedMember.FromValue(
                     reflector: reflector,
                     name: nameof(shapeModule.radius),
@@ -239,7 +241,7 @@ namespace com.IvanMurzak.Unity.MCP.ParticleSystem.Editor.Tests
                     reflector: reflector,
                     name: nameof(ps.noise),
                     type: typeof(UnityEngine.ParticleSystem.NoiseModule),
-                    value: noiseModule)
+                    value: null)
                 .AddProperty(SerializedMember.FromValue(
                     reflector: reflector,
                     name: nameof(noiseModule.enabled),
@@ -272,7 +274,7 @@ namespace com.IvanMurzak.Unity.MCP.ParticleSystem.Editor.Tests
                     reflector: reflector,
                     name: nameof(ps.trails),
                     type: typeof(UnityEngine.ParticleSystem.TrailModule),
-                    value: trailsModule)
+                    value: null)
                 .AddProperty(SerializedMember.FromValue(
                     reflector: reflector,
                     name: nameof(trailsModule.enabled),
@@ -310,7 +312,7 @@ namespace com.IvanMurzak.Unity.MCP.ParticleSystem.Editor.Tests
                     reflector: reflector,
                     name: nameof(ps.main),
                     type: typeof(UnityEngine.ParticleSystem.MainModule),
-                    value: mainModule)
+                    value: null)
                 .AddProperty(SerializedMember.FromValue(
                     reflector: reflector,
                     name: nameof(mainModule.duration),
@@ -320,7 +322,7 @@ namespace com.IvanMurzak.Unity.MCP.ParticleSystem.Editor.Tests
                     reflector: reflector,
                     name: nameof(ps.shape),
                     type: typeof(UnityEngine.ParticleSystem.ShapeModule),
-                    value: shapeModule)
+                    value: null)
                 .AddProperty(SerializedMember.FromValue(
                     reflector: reflector,
                     name: nameof(shapeModule.radius),
@@ -330,7 +332,7 @@ namespace com.IvanMurzak.Unity.MCP.ParticleSystem.Editor.Tests
                     reflector: reflector,
                     name: nameof(ps.noise),
                     type: typeof(UnityEngine.ParticleSystem.NoiseModule),
-                    value: noiseModule)
+                    value: null)
                 .AddProperty(SerializedMember.FromValue(
                     reflector: reflector,
                     name: nameof(noiseModule.enabled),
@@ -367,7 +369,7 @@ namespace com.IvanMurzak.Unity.MCP.ParticleSystem.Editor.Tests
                     reflector: reflector,
                     name: nameof(ps.main),
                     type: typeof(UnityEngine.ParticleSystem.MainModule),
-                    value: mainModule)
+                    value: null)
                 .AddProperty(SerializedMember.FromValue(
                     reflector: reflector,
                     name: nameof(mainModule.duration),
@@ -399,7 +401,7 @@ namespace com.IvanMurzak.Unity.MCP.ParticleSystem.Editor.Tests
                     reflector: reflector,
                     name: nameof(ps.main),
                     type: typeof(UnityEngine.ParticleSystem.MainModule),
-                    value: mainModule)
+                    value: null)
                 .AddProperty(SerializedMember.FromValue(
                     reflector: reflector,
                     name: nameof(mainModule.duration),
