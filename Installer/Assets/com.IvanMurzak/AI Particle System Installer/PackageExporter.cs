@@ -21,7 +21,7 @@ namespace com.IvanMurzak.Unity.MCP.ParticleSystem.Installer
             Debug.Log("Starting Package Export...");
 
             var packagePath = "Assets/com.IvanMurzak/AI Particle System Installer";
-            var outputPath = "build/AI-Particle-System-Installer.unitypackage";
+            var outputPath = "build/AI-ParticleSystem-Installer.unitypackage";
 
             // Ensure build directory exists
             var buildDir = Path.GetDirectoryName(outputPath);
