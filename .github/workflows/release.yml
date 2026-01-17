@@ -90,7 +90,7 @@ jobs:
           projectPath: ./Installer
           unityVersion: ${{ env.INSTALLER_UNITY_VERSION }}
           customImage: "unityci/editor:ubuntu-${{ env.INSTALLER_UNITY_VERSION }}-base-3"
-          buildName: AI-Particle-System-Installer
+          buildName: AI-ParticleSystem-Installer
           buildsPath: build
           buildMethod: com.IvanMurzak.Unity.MCP.ParticleSystem.Installer.PackageExporter.ExportPackage
           customParameters: -CI true -GITHUB_ACTIONS true
@@ -99,7 +99,7 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: unity-installer-package
-          path: ./Installer/build/AI-Particle-System-Installer.unitypackage
+          path: ./Installer/build/AI-ParticleSystem-Installer.unitypackage
 
   # --- UNITY TESTS ---
   # -------------------
@@ -287,7 +287,7 @@ jobs:
       - name: Upload Unity Package to Release
         uses: softprops/action-gh-release@v2
         with:
-          files: ./AI-Particle-System-Installer.unitypackage
+          files: ./AI-ParticleSystem-Installer.unitypackage
           tag_name: ${{ needs.release-unity-plugin.outputs.version }}
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
