@@ -37,8 +37,8 @@ AI-powered tools for Unity ParticleSystem workflow. Inspect and modify ParticleS
 
 ParticleSystem tools:
 
-- `particlesystem-get` - Get ParticleSystem component data (state, modules, renderer settings)
-- `particlesystem-modify` - Modify ParticleSystem component (update any module properties)
+- `particle-system-get` - Get ParticleSystem component data (state, modules, renderer settings)
+- `particle-system-modify` - Modify ParticleSystem component (update any module properties)
 
 Supported modules (24 total):
 

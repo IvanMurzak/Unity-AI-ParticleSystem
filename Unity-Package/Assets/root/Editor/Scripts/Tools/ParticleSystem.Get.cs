@@ -22,7 +22,7 @@ namespace com.IvanMurzak.Unity.MCP.ParticleSystem.Editor.API
 {
     public partial class Tool_ParticleSystem
     {
-        public const string ParticleSystemGetToolId = "particlesystem-get";
+        public const string ParticleSystemGetToolId = "particle-system-get";
 
         [McpPluginTool
         (

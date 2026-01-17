@@ -25,7 +25,7 @@ namespace com.IvanMurzak.Unity.MCP.ParticleSystem.Editor.API
 {
     public partial class Tool_ParticleSystem
     {
-        public const string ParticleSystemModifyToolId = "particlesystem-modify";
+        public const string ParticleSystemModifyToolId = "particle-system-modify";
 
         [McpPluginTool
         (

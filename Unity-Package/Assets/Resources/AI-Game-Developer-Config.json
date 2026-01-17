@@ -202,11 +202,11 @@
       "enabled": true
     },
     {
-      "name": "particlesystem-get",
+      "name": "particle-system-get",
       "enabled": true
     },
     {
-      "name": "particlesystem-modify",
+      "name": "particle-system-modify",
       "enabled": true
     }
   ],
