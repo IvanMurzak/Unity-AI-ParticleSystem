@@ -10,10 +10,8 @@
 
 #nullable enable
 using System.Collections;
-using com.IvanMurzak.Unity.MCP.ParticleSystem.Editor.API;
 using com.IvanMurzak.Unity.MCP.Runtime.Data;
 using NUnit.Framework;
-using UnityEngine;
 using UnityEngine.TestTools;
 
 namespace com.IvanMurzak.Unity.MCP.ParticleSystem.Editor.Tests
