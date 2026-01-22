@@ -16,12 +16,13 @@ using System.Linq;
 using com.IvanMurzak.McpPlugin;
 using com.IvanMurzak.ReflectorNet.Model;
 using com.IvanMurzak.ReflectorNet.Utils;
+using com.IvanMurzak.Unity.MCP.Editor.Utils;
 using com.IvanMurzak.Unity.MCP.Runtime.Data;
 using com.IvanMurzak.Unity.MCP.Runtime.Extensions;
 using com.IvanMurzak.Unity.MCP.Utils;
 using Microsoft.Extensions.Logging;
 
-namespace com.IvanMurzak.Unity.MCP.ParticleSystem.Editor.API
+namespace com.IvanMurzak.Unity.MCP.ParticleSystem.Editor
 {
     public partial class Tool_ParticleSystem
     {
@@ -118,6 +119,12 @@ namespace com.IvanMurzak.Unity.MCP.ParticleSystem.Editor.API
             SerializedMember? renderer = null
         )
         {
+            if (gameObjectRef == null)
+                throw new ArgumentNullException(nameof(gameObjectRef));
+
+            if (!gameObjectRef.IsValid(out var gameObjectValidationError))
+                throw new ArgumentException(gameObjectValidationError, nameof(gameObjectRef));
+
             return MainThread.Instance.Run(() =>
             {
                 var go = gameObjectRef.FindGameObject(out var error);
@@ -125,7 +132,7 @@ namespace com.IvanMurzak.Unity.MCP.ParticleSystem.Editor.API
                     throw new Exception(error);
 
                 if (go == null)
-                    throw new Exception(Error.GameObjectNotFound());
+                    throw new Exception("GameObject not found.");
 
                 // Find the ParticleSystem component
                 UnityEngine.ParticleSystem? ps = null;
@@ -138,7 +145,7 @@ namespace com.IvanMurzak.Unity.MCP.ParticleSystem.Editor.API
                     if (comp == null)
                         continue;
 
-                    if (componentRef != null && componentRef.IsValid)
+                    if (componentRef != null && componentRef.IsValid(out _))
                     {
                         if (componentRef.Matches(allComponents[i], i))
                         {
@@ -157,7 +164,7 @@ namespace com.IvanMurzak.Unity.MCP.ParticleSystem.Editor.API
                 }
 
                 if (ps == null)
-                    throw new Exception(Error.ParticleSystemNotFound());
+                    throw new Exception("ParticleSystem component not found on the specified GameObject.");
 
                 var response = new ModifyParticleSystemResponse
                 {
@@ -503,7 +510,7 @@ namespace com.IvanMurzak.Unity.MCP.ParticleSystem.Editor.API
                     logs.Add("No modifications were made.");
                 }
 
-                UnityEditorInternal.InternalEditorUtility.RepaintAllViews();
+                EditorUtils.RepaintAllEditorWindows();
 
                 response.logs = logs.ToArray();
                 return response;
