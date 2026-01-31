@@ -23,7 +23,7 @@ AI-powered tools for Unity ParticleSystem workflow. Inspect and modify ParticleS
 - [Video Tutorial for Visual Studio Code](https://www.youtube.com/watch?v=ZhP7Ju91mOE)
 - [Video Tutorial for Visual Studio](https://www.youtube.com/watch?v=RGdak4T69mc)
 
-[![DOWNLOAD INSTALLER](https://github.com/IvanMurzak/Unity-MCP/blob/main/docs/img/button/button_download.svg?raw=true)](https://github.com/IvanMurzak/Unity-AI-ParticleSystem/releases/download/1.0.8/AI-ParticleSystem-Installer.unitypackage)
+[![DOWNLOAD INSTALLER](https://github.com/IvanMurzak/Unity-MCP/blob/main/docs/img/button/button_download.svg?raw=true)](https://github.com/IvanMurzak/Unity-AI-ParticleSystem/releases/download/1.0.9/AI-ParticleSystem-Installer.unitypackage)
 
 ### Stability status
 
@@ -73,7 +73,7 @@ Supported modules (24 total):
 
 ### Option 1 - Installer
 
-- **[Download Installer](https://github.com/IvanMurzak/Unity-AI-ParticleSystem/releases/download/1.0.8/AI-ParticleSystem-Installer.unitypackage)**
+- **[Download Installer](https://github.com/IvanMurzak/Unity-AI-ParticleSystem/releases/download/1.0.9/AI-ParticleSystem-Installer.unitypackage)**
 - **Import installer into Unity project**
   > - You can double-click on the file - Unity will open it automatically
   > - OR: Open Unity Editor first, then click on `Assets/Import Package/Custom Package`, and choose the file
