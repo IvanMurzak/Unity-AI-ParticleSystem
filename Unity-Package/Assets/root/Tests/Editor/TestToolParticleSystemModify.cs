@@ -9,6 +9,7 @@
 */
 
 #nullable enable
+using System;
 using System.Collections;
 using com.IvanMurzak.ReflectorNet.Model;
 using com.IvanMurzak.Unity.MCP.Runtime.Data;
@@ -27,7 +28,7 @@ namespace com.IvanMurzak.Unity.MCP.ParticleSystem.Editor.Tests
         {
             var go = CreateGameObjectWithParticleSystem(GO_ParticleSystemName);
             var ps = go.GetComponent<UnityEngine.ParticleSystem>();
-            var reflector = McpPlugin.McpPlugin.Instance!.McpManager.Reflector;
+            var reflector = UnityMcpPluginEditor.Instance.Reflector ?? throw new Exception("Reflector not available.");
 
             var mainModule = ps.main;
             var newDuration = 10.0f;
@@ -63,7 +64,7 @@ namespace com.IvanMurzak.Unity.MCP.ParticleSystem.Editor.Tests
         {
             var go = CreateGameObjectWithParticleSystem(GO_ParticleSystemName);
             var ps = go.GetComponent<UnityEngine.ParticleSystem>();
-            var reflector = McpPlugin.McpPlugin.Instance!.McpManager.Reflector;
+            var reflector = UnityMcpPluginEditor.Instance.Reflector ?? throw new Exception("Reflector not available.");
 
             var mainModule = ps.main;
             var newMaxParticles = 500;
@@ -96,7 +97,7 @@ namespace com.IvanMurzak.Unity.MCP.ParticleSystem.Editor.Tests
         {
             var go = CreateGameObjectWithParticleSystem(GO_ParticleSystemName);
             var ps = go.GetComponent<UnityEngine.ParticleSystem>();
-            var reflector = McpPlugin.McpPlugin.Instance!.McpManager.Reflector;
+            var reflector = UnityMcpPluginEditor.Instance.Reflector ?? throw new Exception("Reflector not available.");
 
             var mainModule = ps.main;
             var originalLoop = mainModule.loop;
@@ -130,7 +131,7 @@ namespace com.IvanMurzak.Unity.MCP.ParticleSystem.Editor.Tests
         {
             var go = CreateGameObjectWithParticleSystem(GO_ParticleSystemName);
             var ps = go.GetComponent<UnityEngine.ParticleSystem>();
-            var reflector = McpPlugin.McpPlugin.Instance!.McpManager.Reflector;
+            var reflector = UnityMcpPluginEditor.Instance.Reflector ?? throw new Exception("Reflector not available.");
 
             var emissionModule = ps.emission;
             var originalEnabled = emissionModule.enabled;
@@ -164,7 +165,7 @@ namespace com.IvanMurzak.Unity.MCP.ParticleSystem.Editor.Tests
         {
             var go = CreateGameObjectWithParticleSystem(GO_ParticleSystemName);
             var ps = go.GetComponent<UnityEngine.ParticleSystem>();
-            var reflector = McpPlugin.McpPlugin.Instance!.McpManager.Reflector;
+            var reflector = UnityMcpPluginEditor.Instance.Reflector ?? throw new Exception("Reflector not available.");
 
             var shapeModule = ps.shape;
             var originalEnabled = shapeModule.enabled;
@@ -198,7 +199,7 @@ namespace com.IvanMurzak.Unity.MCP.ParticleSystem.Editor.Tests
         {
             var go = CreateGameObjectWithParticleSystem(GO_ParticleSystemName);
             var ps = go.GetComponent<UnityEngine.ParticleSystem>();
-            var reflector = McpPlugin.McpPlugin.Instance!.McpManager.Reflector;
+            var reflector = UnityMcpPluginEditor.Instance.Reflector ?? throw new Exception("Reflector not available.");
 
             var shapeModule = ps.shape;
             var newRadius = 5.0f;
@@ -231,7 +232,7 @@ namespace com.IvanMurzak.Unity.MCP.ParticleSystem.Editor.Tests
         {
             var go = CreateGameObjectWithParticleSystem(GO_ParticleSystemName);
             var ps = go.GetComponent<UnityEngine.ParticleSystem>();
-            var reflector = McpPlugin.McpPlugin.Instance!.McpManager.Reflector;
+            var reflector = UnityMcpPluginEditor.Instance.Reflector ?? throw new Exception("Reflector not available.");
 
             var noiseModule = ps.noise;
             var newEnabled = true;
@@ -264,7 +265,7 @@ namespace com.IvanMurzak.Unity.MCP.ParticleSystem.Editor.Tests
         {
             var go = CreateGameObjectWithParticleSystem(GO_ParticleSystemName);
             var ps = go.GetComponent<UnityEngine.ParticleSystem>();
-            var reflector = McpPlugin.McpPlugin.Instance!.McpManager.Reflector;
+            var reflector = UnityMcpPluginEditor.Instance.Reflector ?? throw new Exception("Reflector not available.");
 
             var trailsModule = ps.trails;
             var newEnabled = true;
@@ -297,7 +298,7 @@ namespace com.IvanMurzak.Unity.MCP.ParticleSystem.Editor.Tests
         {
             var go = CreateGameObjectWithParticleSystem(GO_ParticleSystemName);
             var ps = go.GetComponent<UnityEngine.ParticleSystem>();
-            var reflector = McpPlugin.McpPlugin.Instance!.McpManager.Reflector;
+            var reflector = UnityMcpPluginEditor.Instance.Reflector ?? throw new Exception("Reflector not available.");
 
             var mainModule = ps.main;
             var shapeModule = ps.shape;
@@ -359,7 +360,7 @@ namespace com.IvanMurzak.Unity.MCP.ParticleSystem.Editor.Tests
         {
             var go = CreateGameObjectWithParticleSystem(GO_ParticleSystemName);
             var ps = go.GetComponent<UnityEngine.ParticleSystem>();
-            var reflector = McpPlugin.McpPlugin.Instance!.McpManager.Reflector;
+            var reflector = UnityMcpPluginEditor.Instance.Reflector ?? throw new Exception("Reflector not available.");
 
             var mainModule = ps.main;
             var newDuration = 20.0f;
@@ -392,7 +393,7 @@ namespace com.IvanMurzak.Unity.MCP.ParticleSystem.Editor.Tests
         {
             var go = CreateGameObjectWithParticleSystem(GO_ParticleSystemName);
             var ps = go.GetComponent<UnityEngine.ParticleSystem>();
-            var reflector = McpPlugin.McpPlugin.Instance!.McpManager.Reflector;
+            var reflector = UnityMcpPluginEditor.Instance.Reflector ?? throw new Exception("Reflector not available.");
 
             var mainModule = ps.main;
 

@@ -181,7 +181,7 @@ namespace com.IvanMurzak.Unity.MCP.ParticleSystem.Editor
                     time = ps.time
                 };
 
-                var reflector = McpPlugin.McpPlugin.Instance!.McpManager.Reflector;
+                var reflector = UnityMcpPluginEditor.Instance.Reflector ?? throw new Exception("Reflector not available.");
                 var logger = UnityLoggerFactory.LoggerFactory.CreateLogger<Tool_ParticleSystem>();
 
                 // Serialize requested modules

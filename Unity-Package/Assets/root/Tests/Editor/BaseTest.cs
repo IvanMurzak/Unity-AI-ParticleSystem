@@ -9,6 +9,7 @@
 */
 
 #nullable enable
+using System;
 using System.Collections.Generic;
 using System.Text.Json;
 using com.IvanMurzak.McpPlugin.Common.Model;
@@ -24,13 +25,13 @@ namespace com.IvanMurzak.Unity.MCP.ParticleSystem.Editor.Tests
 
         protected virtual ResponseData<ResponseCallTool> RunToolAllowWarnings(string toolName, string json)
         {
-            var reflector = McpPlugin.McpPlugin.Instance!.McpManager.Reflector;
+            var reflector = UnityMcpPluginEditor.Instance.Reflector ?? throw new Exception("Reflector not available.");
 
             Debug.Log($"{toolName} Started with JSON:\n{json}");
 
             var parameters = JsonSerializer.Deserialize<Dictionary<string, JsonElement>>(json);
             var request = new RequestCallTool(toolName, parameters!);
-            var task = McpPlugin.McpPlugin.Instance.McpManager.ToolManager!.RunCallTool(request);
+            var task = UnityMcpPluginEditor.Instance.Tools!.RunCallTool(request);
             var result = task.Result;
 
             Debug.Log($"{toolName} Completed");
