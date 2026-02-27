@@ -31,7 +31,8 @@ namespace com.IvanMurzak.Unity.MCP.ParticleSystem.Editor
         [McpPluginTool
         (
             ParticleSystemModifyToolId,
-            Title = "ParticleSystem / Modify"
+            Title = "ParticleSystem / Modify",
+            IdempotentHint = true
         )]
         [Description("Modify a ParticleSystem component on a GameObject. " +
             "Provide the data model with only the modules you want to change. " +
