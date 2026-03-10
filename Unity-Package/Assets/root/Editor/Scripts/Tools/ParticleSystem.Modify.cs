@@ -185,7 +185,7 @@ namespace com.IvanMurzak.Unity.MCP.ParticleSystem.Editor
                     var module = ps.main;
                     object? boxedModule = module;
                     var moduleLogs = new Logs();
-                    if (reflector.TryPopulate(ref boxedModule, main, logs: moduleLogs, logger: logger))
+                    if (reflector.TryModify(ref boxedModule, main, logs: moduleLogs, logger: logger))
                     {
                         anyModified = true;
                         logs.Add("[Main] Module modified successfully.");
@@ -198,7 +198,7 @@ namespace com.IvanMurzak.Unity.MCP.ParticleSystem.Editor
                     var module = ps.emission;
                     object? boxedModule = module;
                     var moduleLogs = new Logs();
-                    if (reflector.TryPopulate(ref boxedModule, emission, logs: moduleLogs, logger: logger))
+                    if (reflector.TryModify(ref boxedModule, emission, logs: moduleLogs, logger: logger))
                     {
                         anyModified = true;
                         logs.Add("[Emission] Module modified successfully.");
@@ -211,7 +211,7 @@ namespace com.IvanMurzak.Unity.MCP.ParticleSystem.Editor
                     var module = ps.shape;
                     object? boxedModule = module;
                     var moduleLogs = new Logs();
-                    if (reflector.TryPopulate(ref boxedModule, shape, logs: moduleLogs, logger: logger))
+                    if (reflector.TryModify(ref boxedModule, shape, logs: moduleLogs, logger: logger))
                     {
                         anyModified = true;
                         logs.Add("[Shape] Module modified successfully.");
@@ -224,7 +224,7 @@ namespace com.IvanMurzak.Unity.MCP.ParticleSystem.Editor
                     var module = ps.velocityOverLifetime;
                     object? boxedModule = module;
                     var moduleLogs = new Logs();
-                    if (reflector.TryPopulate(ref boxedModule, velocityOverLifetime, logs: moduleLogs, logger: logger))
+                    if (reflector.TryModify(ref boxedModule, velocityOverLifetime, logs: moduleLogs, logger: logger))
                     {
                         anyModified = true;
                         logs.Add("[VelocityOverLifetime] Module modified successfully.");
@@ -237,7 +237,7 @@ namespace com.IvanMurzak.Unity.MCP.ParticleSystem.Editor
                     var module = ps.limitVelocityOverLifetime;
                     object? boxedModule = module;
                     var moduleLogs = new Logs();
-                    if (reflector.TryPopulate(ref boxedModule, limitVelocityOverLifetime, logs: moduleLogs, logger: logger))
+                    if (reflector.TryModify(ref boxedModule, limitVelocityOverLifetime, logs: moduleLogs, logger: logger))
                     {
                         anyModified = true;
                         logs.Add("[LimitVelocityOverLifetime] Module modified successfully.");
@@ -250,7 +250,7 @@ namespace com.IvanMurzak.Unity.MCP.ParticleSystem.Editor
                     var module = ps.inheritVelocity;
                     object? boxedModule = module;
                     var moduleLogs = new Logs();
-                    if (reflector.TryPopulate(ref boxedModule, inheritVelocity, logs: moduleLogs, logger: logger))
+                    if (reflector.TryModify(ref boxedModule, inheritVelocity, logs: moduleLogs, logger: logger))
                     {
                         anyModified = true;
                         logs.Add("[InheritVelocity] Module modified successfully.");
@@ -263,7 +263,7 @@ namespace com.IvanMurzak.Unity.MCP.ParticleSystem.Editor
                     var module = ps.lifetimeByEmitterSpeed;
                     object? boxedModule = module;
                     var moduleLogs = new Logs();
-                    if (reflector.TryPopulate(ref boxedModule, lifetimeByEmitterSpeed, logs: moduleLogs, logger: logger))
+                    if (reflector.TryModify(ref boxedModule, lifetimeByEmitterSpeed, logs: moduleLogs, logger: logger))
                     {
                         anyModified = true;
                         logs.Add("[LifetimeByEmitterSpeed] Module modified successfully.");
@@ -276,7 +276,7 @@ namespace com.IvanMurzak.Unity.MCP.ParticleSystem.Editor
                     var module = ps.forceOverLifetime;
                     object? boxedModule = module;
                     var moduleLogs = new Logs();
-                    if (reflector.TryPopulate(ref boxedModule, forceOverLifetime, logs: moduleLogs, logger: logger))
+                    if (reflector.TryModify(ref boxedModule, forceOverLifetime, logs: moduleLogs, logger: logger))
                     {
                         anyModified = true;
                         logs.Add("[ForceOverLifetime] Module modified successfully.");
@@ -289,7 +289,7 @@ namespace com.IvanMurzak.Unity.MCP.ParticleSystem.Editor
                     var module = ps.colorOverLifetime;
                     object? boxedModule = module;
                     var moduleLogs = new Logs();
-                    if (reflector.TryPopulate(ref boxedModule, colorOverLifetime, logs: moduleLogs, logger: logger))
+                    if (reflector.TryModify(ref boxedModule, colorOverLifetime, logs: moduleLogs, logger: logger))
                     {
                         anyModified = true;
                         logs.Add("[ColorOverLifetime] Module modified successfully.");
@@ -302,7 +302,7 @@ namespace com.IvanMurzak.Unity.MCP.ParticleSystem.Editor
                     var module = ps.colorBySpeed;
                     object? boxedModule = module;
                     var moduleLogs = new Logs();
-                    if (reflector.TryPopulate(ref boxedModule, colorBySpeed, logs: moduleLogs, logger: logger))
+                    if (reflector.TryModify(ref boxedModule, colorBySpeed, logs: moduleLogs, logger: logger))
                     {
                         anyModified = true;
                         logs.Add("[ColorBySpeed] Module modified successfully.");
@@ -315,7 +315,7 @@ namespace com.IvanMurzak.Unity.MCP.ParticleSystem.Editor
                     var module = ps.sizeOverLifetime;
                     object? boxedModule = module;
                     var moduleLogs = new Logs();
-                    if (reflector.TryPopulate(ref boxedModule, sizeOverLifetime, logs: moduleLogs, logger: logger))
+                    if (reflector.TryModify(ref boxedModule, sizeOverLifetime, logs: moduleLogs, logger: logger))
                     {
                         anyModified = true;
                         logs.Add("[SizeOverLifetime] Module modified successfully.");
@@ -328,7 +328,7 @@ namespace com.IvanMurzak.Unity.MCP.ParticleSystem.Editor
                     var module = ps.sizeBySpeed;
                     object? boxedModule = module;
                     var moduleLogs = new Logs();
-                    if (reflector.TryPopulate(ref boxedModule, sizeBySpeed, logs: moduleLogs, logger: logger))
+                    if (reflector.TryModify(ref boxedModule, sizeBySpeed, logs: moduleLogs, logger: logger))
                     {
                         anyModified = true;
                         logs.Add("[SizeBySpeed] Module modified successfully.");
@@ -341,7 +341,7 @@ namespace com.IvanMurzak.Unity.MCP.ParticleSystem.Editor
                     var module = ps.rotationOverLifetime;
                     object? boxedModule = module;
                     var moduleLogs = new Logs();
-                    if (reflector.TryPopulate(ref boxedModule, rotationOverLifetime, logs: moduleLogs, logger: logger))
+                    if (reflector.TryModify(ref boxedModule, rotationOverLifetime, logs: moduleLogs, logger: logger))
                     {
                         anyModified = true;
                         logs.Add("[RotationOverLifetime] Module modified successfully.");
@@ -354,7 +354,7 @@ namespace com.IvanMurzak.Unity.MCP.ParticleSystem.Editor
                     var module = ps.rotationBySpeed;
                     object? boxedModule = module;
                     var moduleLogs = new Logs();
-                    if (reflector.TryPopulate(ref boxedModule, rotationBySpeed, logs: moduleLogs, logger: logger))
+                    if (reflector.TryModify(ref boxedModule, rotationBySpeed, logs: moduleLogs, logger: logger))
                     {
                         anyModified = true;
                         logs.Add("[RotationBySpeed] Module modified successfully.");
@@ -367,7 +367,7 @@ namespace com.IvanMurzak.Unity.MCP.ParticleSystem.Editor
                     var module = ps.externalForces;
                     object? boxedModule = module;
                     var moduleLogs = new Logs();
-                    if (reflector.TryPopulate(ref boxedModule, externalForces, logs: moduleLogs, logger: logger))
+                    if (reflector.TryModify(ref boxedModule, externalForces, logs: moduleLogs, logger: logger))
                     {
                         anyModified = true;
                         logs.Add("[ExternalForces] Module modified successfully.");
@@ -380,7 +380,7 @@ namespace com.IvanMurzak.Unity.MCP.ParticleSystem.Editor
                     var module = ps.noise;
                     object? boxedModule = module;
                     var moduleLogs = new Logs();
-                    if (reflector.TryPopulate(ref boxedModule, noise, logs: moduleLogs, logger: logger))
+                    if (reflector.TryModify(ref boxedModule, noise, logs: moduleLogs, logger: logger))
                     {
                         anyModified = true;
                         logs.Add("[Noise] Module modified successfully.");
@@ -393,7 +393,7 @@ namespace com.IvanMurzak.Unity.MCP.ParticleSystem.Editor
                     var module = ps.collision;
                     object? boxedModule = module;
                     var moduleLogs = new Logs();
-                    if (reflector.TryPopulate(ref boxedModule, collision, logs: moduleLogs, logger: logger))
+                    if (reflector.TryModify(ref boxedModule, collision, logs: moduleLogs, logger: logger))
                     {
                         anyModified = true;
                         logs.Add("[Collision] Module modified successfully.");
@@ -406,7 +406,7 @@ namespace com.IvanMurzak.Unity.MCP.ParticleSystem.Editor
                     var module = ps.trigger;
                     object? boxedModule = module;
                     var moduleLogs = new Logs();
-                    if (reflector.TryPopulate(ref boxedModule, trigger, logs: moduleLogs, logger: logger))
+                    if (reflector.TryModify(ref boxedModule, trigger, logs: moduleLogs, logger: logger))
                     {
                         anyModified = true;
                         logs.Add("[Trigger] Module modified successfully.");
@@ -419,7 +419,7 @@ namespace com.IvanMurzak.Unity.MCP.ParticleSystem.Editor
                     var module = ps.subEmitters;
                     object? boxedModule = module;
                     var moduleLogs = new Logs();
-                    if (reflector.TryPopulate(ref boxedModule, subEmitters, logs: moduleLogs, logger: logger))
+                    if (reflector.TryModify(ref boxedModule, subEmitters, logs: moduleLogs, logger: logger))
                     {
                         anyModified = true;
                         logs.Add("[SubEmitters] Module modified successfully.");
@@ -432,7 +432,7 @@ namespace com.IvanMurzak.Unity.MCP.ParticleSystem.Editor
                     var module = ps.textureSheetAnimation;
                     object? boxedModule = module;
                     var moduleLogs = new Logs();
-                    if (reflector.TryPopulate(ref boxedModule, textureSheetAnimation, logs: moduleLogs, logger: logger))
+                    if (reflector.TryModify(ref boxedModule, textureSheetAnimation, logs: moduleLogs, logger: logger))
                     {
                         anyModified = true;
                         logs.Add("[TextureSheetAnimation] Module modified successfully.");
@@ -445,7 +445,7 @@ namespace com.IvanMurzak.Unity.MCP.ParticleSystem.Editor
                     var module = ps.lights;
                     object? boxedModule = module;
                     var moduleLogs = new Logs();
-                    if (reflector.TryPopulate(ref boxedModule, lights, logs: moduleLogs, logger: logger))
+                    if (reflector.TryModify(ref boxedModule, lights, logs: moduleLogs, logger: logger))
                     {
                         anyModified = true;
                         logs.Add("[Lights] Module modified successfully.");
@@ -458,7 +458,7 @@ namespace com.IvanMurzak.Unity.MCP.ParticleSystem.Editor
                     var module = ps.trails;
                     object? boxedModule = module;
                     var moduleLogs = new Logs();
-                    if (reflector.TryPopulate(ref boxedModule, trails, logs: moduleLogs, logger: logger))
+                    if (reflector.TryModify(ref boxedModule, trails, logs: moduleLogs, logger: logger))
                     {
                         anyModified = true;
                         logs.Add("[Trails] Module modified successfully.");
@@ -471,7 +471,7 @@ namespace com.IvanMurzak.Unity.MCP.ParticleSystem.Editor
                     var module = ps.customData;
                     object? boxedModule = module;
                     var moduleLogs = new Logs();
-                    if (reflector.TryPopulate(ref boxedModule, customData, logs: moduleLogs, logger: logger))
+                    if (reflector.TryModify(ref boxedModule, customData, logs: moduleLogs, logger: logger))
                     {
                         anyModified = true;
                         logs.Add("[CustomData] Module modified successfully.");
@@ -486,7 +486,7 @@ namespace com.IvanMurzak.Unity.MCP.ParticleSystem.Editor
                     {
                         object? boxedRenderer = rendererComponent;
                         var moduleLogs = new Logs();
-                        if (reflector.TryPopulate(ref boxedRenderer, renderer, logs: moduleLogs, logger: logger))
+                        if (reflector.TryModify(ref boxedRenderer, renderer, logs: moduleLogs, logger: logger))
                         {
                             anyModified = true;
                             logs.Add("[Renderer] Component modified successfully.");
