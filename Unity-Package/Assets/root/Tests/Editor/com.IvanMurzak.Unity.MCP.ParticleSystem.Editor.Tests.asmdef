@@ -5,8 +5,6 @@
         "com.IvanMurzak.Unity.MCP.Editor.Tests",
         "com.IvanMurzak.Unity.MCP.Runtime",
         "com.IvanMurzak.Unity.MCP.TestFiles",
-        "UnityEngine.TestRunner",
-        "UnityEditor.TestRunner",
         "com.IvanMurzak.Unity.MCP.ParticleSystem.Runtime",
         "com.IvanMurzak.Unity.MCP.ParticleSystem.Editor"
     ],
@@ -14,10 +12,10 @@
         "Editor"
     ],
     "excludePlatforms": [],
+    "optionalUnityReferences": ["TestAssemblies"],
     "allowUnsafeCode": false,
     "overrideReferences": true,
     "precompiledReferences": [
-        "nunit.framework.dll",
         "System.Text.Json.dll",
         "Microsoft.Extensions.Logging.Abstractions.dll",
         "Microsoft.AspNetCore.SignalR.Client.dll",
@@ -28,7 +26,9 @@
         "R3.dll"
     ],
     "autoReferenced": false,
-    "defineConstraints": [],
+    "defineConstraints": [
+        "UNITY_INCLUDE_TESTS"
+    ],
     "versionDefines": [],
     "noEngineReferences": false
 }
