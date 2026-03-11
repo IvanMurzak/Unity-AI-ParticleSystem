@@ -48,5 +48,5 @@
       ]
     }
   ],
-  "testables": ["com.ivanmurzak.unity.mcp.particlesystem"]
+  "testables": ["com.ivanmurzak.unity.mcp.particlesystem", "com.ivanmurzak.unity.mcp"]
 }
