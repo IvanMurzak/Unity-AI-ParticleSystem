@@ -1,0 +1,23 @@
+commands/use-local-mcp.ps1
+  441fb36c56f115f7 1-208
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.1.10",
+  "base_commit_sha": "7e0b7e3278cde2380edf105637810bd78c20dcb6",
+  "prompts": {
+    "441fb36c56f115f7": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "d2d40765-102c-4b07-a8d6-68337d97ca1c",
+        "model": "claude-opus-4-6"
+      },
+      "human_author": "Ivan Murzak <Ivan.D.Murzak@gmail.com>",
+      "messages": [],
+      "total_additions": 208,
+      "total_deletions": 0,
+      "accepted_lines": 208,
+      "overriden_lines": 0
+    }
+  }
+}
