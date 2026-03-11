@@ -76,6 +76,7 @@ crashlytics-build.properties
 
 # Claude
 .claude
+.mcp.json
 
 # Unity
 /UserSettings/
