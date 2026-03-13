@@ -48,18 +48,6 @@ $VersionFiles = @(
         Pattern     = 'public const string Version = "[\d\.]+";'
         Replace     = 'public const string Version = "{VERSION}";'
         Description = "Installer C# version constant"
-    },
-    @{
-        Path        = "Unity-Package/Assets/root/README.md"
-        Pattern     = "https://github\.com/IvanMurzak/Unity-AI-ParticleSystem/releases/download/[\d\.]+/AI-ParticleSystem-Installer\.unitypackage"
-        Replace     = "https://github.com/IvanMurzak/Unity-AI-ParticleSystem/releases/download/{VERSION}/AI-ParticleSystem-Installer.unitypackage"
-        Description = "Package README download URL"
-    },
-    @{
-        Path        = "README.md"
-        Pattern     = "https://github\.com/IvanMurzak/Unity-AI-ParticleSystem/releases/download/[\d\.]+/AI-ParticleSystem-Installer\.unitypackage"
-        Replace     = "https://github.com/IvanMurzak/Unity-AI-ParticleSystem/releases/download/{VERSION}/AI-ParticleSystem-Installer.unitypackage"
-        Description = "Repository README download URL"
     }
 )
 
