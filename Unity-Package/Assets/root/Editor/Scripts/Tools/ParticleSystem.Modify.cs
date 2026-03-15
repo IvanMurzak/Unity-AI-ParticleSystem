@@ -32,7 +32,10 @@ namespace com.IvanMurzak.Unity.MCP.ParticleSystem.Editor
         (
             ParticleSystemModifyToolId,
             Title = "ParticleSystem / Modify",
-            IdempotentHint = true
+            ReadOnlyHint = false,
+            DestructiveHint = false,
+            IdempotentHint = true,
+            OpenWorldHint = false
         )]
         [Description("Modify a ParticleSystem component on a GameObject. " +
             "Provide the data model with only the modules you want to change. " +

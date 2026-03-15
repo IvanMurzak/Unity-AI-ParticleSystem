@@ -29,7 +29,9 @@ namespace com.IvanMurzak.Unity.MCP.ParticleSystem.Editor
             ParticleSystemGetToolId,
             Title = "ParticleSystem / Get",
             ReadOnlyHint = true,
-            IdempotentHint = true
+            DestructiveHint = false,
+            IdempotentHint = true,
+            OpenWorldHint = false
         )]
         [Description("Get detailed information about a ParticleSystem component on a GameObject. " +
             "Returns particle system state and optionally serialized data for each module. " +
