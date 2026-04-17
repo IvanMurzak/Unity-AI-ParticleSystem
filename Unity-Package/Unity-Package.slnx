@@ -1,2 +1,5 @@
 ﻿<Solution>
+  <Project Path="com.IvanMurzak.Unity.MCP.ParticleSystem.Editor.csproj" />
+  <Project Path="com.IvanMurzak.Unity.MCP.ParticleSystem.Editor.Tests.csproj" />
+  <Project Path="com.IvanMurzak.Unity.MCP.ParticleSystem.Tests.csproj" />
 </Solution>
