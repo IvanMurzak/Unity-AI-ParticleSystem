@@ -12,7 +12,7 @@
 using System;
 using System.Collections;
 using com.IvanMurzak.ReflectorNet.Model;
-using com.IvanMurzak.Unity.MCP.Runtime.Data;
+using AIGD;
 using NUnit.Framework;
 using UnityEngine;
 using UnityEngine.TestTools;

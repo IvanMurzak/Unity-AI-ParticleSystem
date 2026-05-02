@@ -11,7 +11,7 @@
 #nullable enable
 using System.ComponentModel;
 using com.IvanMurzak.ReflectorNet.Model;
-using com.IvanMurzak.Unity.MCP.Runtime.Data;
+using AIGD;
 
 namespace com.IvanMurzak.Unity.MCP.ParticleSystem.Editor
 {
