@@ -37,6 +37,28 @@ namespace com.IvanMurzak.Unity.MCP.ParticleSystem.Editor
             IdempotentHint = true,
             OpenWorldHint = false
         )]
+        [McpPluginSkillDescription("Modify a `UnityEngine.ParticleSystem` component on a GameObject. Pass " +
+            "`SerializedMember` payloads only for the modules you want to change; everything else is left alone. " +
+            "Use '" + ParticleSystemGetToolId + "' first to inspect the current structure.")]
+        [McpPluginSkillBody("Modify a `UnityEngine.ParticleSystem` component on a GameObject. Pass `SerializedMember` " +
+            "payloads only for the modules you want to change; omitted modules are left untouched. Use " +
+            "'" + ParticleSystemGetToolId + "' first to inspect the current structure so the diff is targeted.\n\n" +
+            "## Inputs\n\n" +
+            "- `gameObjectRef` — the GameObject hosting the `ParticleSystem` component (required).\n" +
+            "- `componentRef` — optional. Resolves a specific `ParticleSystem` when the GameObject has more than " +
+            "one; otherwise the first `ParticleSystem` found is used.\n" +
+            "- `main`, `emission`, `shape`, `velocityOverLifetime`, `limitVelocityOverLifetime`, " +
+            "`inheritVelocity`, `lifetimeByEmitterSpeed`, `forceOverLifetime`, `colorOverLifetime`, `colorBySpeed`, " +
+            "`sizeOverLifetime`, `sizeBySpeed`, `rotationOverLifetime`, `rotationBySpeed`, `externalForces`, " +
+            "`noise`, `collision`, `trigger`, `subEmitters`, `textureSheetAnimation`, `lights`, `trails`, " +
+            "`customData`, `renderer` — optional `SerializedMember` payloads per module. Include only the " +
+            "properties you want to change.\n\n" +
+            "## Behavior\n\n" +
+            "Each non-null module is applied via `Reflector.TryModify` and logged with a `[ModuleName]` prefix in " +
+            "the response's `logs` array. The `renderer` payload targets the sibling " +
+            "`UnityEngine.ParticleSystemRenderer` component on the same GameObject; if absent, the call logs the " +
+            "miss instead of throwing. When at least one module was modified, the GameObject and the " +
+            "`ParticleSystem` are marked dirty so the change persists. The whole call runs on the Unity main thread.")]
         [Description("Modify a ParticleSystem component on a GameObject. " +
             "Provide the data model with only the modules you want to change. " +
             "Use '" + ParticleSystemGetToolId + "' first to inspect the ParticleSystem structure before modifying. " +
