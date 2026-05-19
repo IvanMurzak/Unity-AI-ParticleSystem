@@ -33,6 +33,33 @@ namespace com.IvanMurzak.Unity.MCP.ParticleSystem.Editor
             IdempotentHint = true,
             OpenWorldHint = false
         )]
+        [McpPluginSkillDescription("Inspect a `UnityEngine.ParticleSystem` component on a GameObject — runtime state " +
+            "(playing/paused/emitting/stopped, particle count, time) plus opt-in serialized data for any of the " +
+            "~24 particle modules (Main, Emission, Shape, Velocity, Noise, Collision, Trails, Renderer, etc.). " +
+            "Pair with '" + ParticleSystemModifyToolId + "' to write changes back.")]
+        [McpPluginSkillBody("Inspect a `UnityEngine.ParticleSystem` component on a GameObject. Returns runtime state " +
+            "(`isPlaying`, `isPaused`, `isEmitting`, `isStopped`, `particleCount`, `time`) plus opt-in serialized data " +
+            "for any of the particle modules. Use '" + ParticleSystemModifyToolId + "' afterwards to write changes back.\n\n" +
+            "## Inputs\n\n" +
+            "- `gameObjectRef` — the GameObject hosting the `ParticleSystem` component (required).\n" +
+            "- `componentRef` — optional. Resolves a specific `ParticleSystem` when the GameObject has more than " +
+            "one; otherwise the first `ParticleSystem` found is used.\n" +
+            "- `includeMain`, `includeEmission`, `includeShape`, `includeVelocityOverLifetime`, " +
+            "`includeLimitVelocityOverLifetime`, `includeInheritVelocity`, `includeLifetimeByEmitterSpeed`, " +
+            "`includeForceOverLifetime`, `includeColorOverLifetime`, `includeColorBySpeed`, " +
+            "`includeSizeOverLifetime`, `includeSizeBySpeed`, `includeRotationOverLifetime`, " +
+            "`includeRotationBySpeed`, `includeExternalForces`, `includeNoise`, `includeCollision`, " +
+            "`includeTrigger`, `includeSubEmitters`, `includeTextureSheetAnimation`, `includeLights`, " +
+            "`includeTrails`, `includeCustomData`, `includeRenderer` — per-module toggles. `includeMain` defaults " +
+            "to `true`; everything else defaults to `false`.\n" +
+            "- `includeAll` — when `true`, overrides every per-module flag and emits all modules.\n" +
+            "- `deepSerialization` — when `true`, recurses through nested objects via ReflectorNet; otherwise only " +
+            "top-level members are serialized (cheaper, smaller payload).\n\n" +
+            "## Behavior\n\n" +
+            "Only the modules whose include-flags resolve to `true` are serialized — this keeps responses small " +
+            "when you only need one or two modules. `includeRenderer` reads the sibling " +
+            "`UnityEngine.ParticleSystemRenderer` component on the same GameObject and is skipped silently when " +
+            "no renderer is present. The whole call runs on the Unity main thread.")]
         [Description("Get detailed information about a ParticleSystem component on a GameObject. " +
             "Returns particle system state and optionally serialized data for each module. " +
             "Use the boolean flags to request specific modules. " +
