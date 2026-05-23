@@ -127,8 +127,16 @@ for project in "${PROJECTS[@]}"; do
     # Launch Unity Editor with the project path (in background)
     "$UNITY_EXE" -projectPath "$PROJECT_PATH" &
 
-    # Delay between launches to avoid overwhelming the system
-    sleep 2
+    # Stagger between launches: Unity's LicensingClient and UPM package-cache
+    # extraction both race when multiple Editors start within a few seconds of
+    # each other. 2s is too short — the first Editor spawns its LicensingClient
+    # (e.g. protocol 1.16.2 for Unity 2023.2+) and subsequent Editors of an
+    # older version (e.g. 2022.3) fail to attach with "Unsupported protocol
+    # version" + exit 199. The UPM cache also corrupts under ENOENT when two
+    # Editors try to extract the same .tgz into the per-user cache at once.
+    # 30 seconds gives the first Editor enough time to finish the licensing
+    # handshake AND finish UPM extraction before the next one starts.
+    sleep 30
 done
 
 echo ""

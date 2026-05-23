@@ -118,8 +118,17 @@ foreach ($Project in $Projects) {
     # Launch Unity Editor with the project path
     Start-Process -FilePath $UnityExe -ArgumentList "-projectPath `"$ProjectPath`""
 
-    # Delay between launches to avoid overwhelming the system
-    Start-Sleep -Seconds 2
+    # Stagger between launches: Unity's LicensingClient and UPM package-cache
+    # extraction both race when multiple Editors start within a few seconds of
+    # each other. A 2s stagger is too short — the first Editor spawns its
+    # LicensingClient (e.g. protocol 1.16.2 for Unity 2023.2+) and subsequent
+    # Editors of an older version (e.g. 2022.3) fail to attach with
+    # "Unsupported protocol version" + exit 199. The UPM cache also corrupts
+    # under ENOENT when two Editors try to extract the same `.tgz` into
+    # %LOCALAPPDATA%/Unity/cache/packages/<id>@<ver>/ at once.
+    # 30 seconds gives the first Editor enough time to finish licensing
+    # handshake AND finish UPM extraction before the next one starts.
+    Start-Sleep -Seconds 30
 }
 
 Write-Host ""
