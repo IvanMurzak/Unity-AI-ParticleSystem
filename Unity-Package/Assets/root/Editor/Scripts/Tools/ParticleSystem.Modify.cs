@@ -28,7 +28,7 @@ namespace com.IvanMurzak.Unity.MCP.ParticleSystem.Editor
     {
         public const string ParticleSystemModifyToolId = "particle-system-modify";
 
-        [McpPluginTool
+        [AiTool
         (
             ParticleSystemModifyToolId,
             Title = "ParticleSystem / Modify",
@@ -37,10 +37,10 @@ namespace com.IvanMurzak.Unity.MCP.ParticleSystem.Editor
             IdempotentHint = true,
             OpenWorldHint = false
         )]
-        [McpPluginSkillDescription("Modify a `UnityEngine.ParticleSystem` component on a GameObject. Pass " +
+        [AiSkillDescription("Modify a `UnityEngine.ParticleSystem` component on a GameObject. Pass " +
             "`SerializedMember` payloads only for the modules you want to change; everything else is left alone. " +
             "Use '" + ParticleSystemGetToolId + "' first to inspect the current structure.")]
-        [McpPluginSkillBody("Modify a `UnityEngine.ParticleSystem` component on a GameObject. Pass `SerializedMember` " +
+        [AiSkillBody("Modify a `UnityEngine.ParticleSystem` component on a GameObject. Pass `SerializedMember` " +
             "payloads only for the modules you want to change; omitted modules are left untouched. Use " +
             "'" + ParticleSystemGetToolId + "' first to inspect the current structure so the diff is targeted.\n\n" +
             "## Inputs\n\n" +

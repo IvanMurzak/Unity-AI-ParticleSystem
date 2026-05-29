@@ -24,7 +24,7 @@ namespace com.IvanMurzak.Unity.MCP.ParticleSystem.Editor
     {
         public const string ParticleSystemGetToolId = "particle-system-get";
 
-        [McpPluginTool
+        [AiTool
         (
             ParticleSystemGetToolId,
             Title = "ParticleSystem / Get",
@@ -33,11 +33,11 @@ namespace com.IvanMurzak.Unity.MCP.ParticleSystem.Editor
             IdempotentHint = true,
             OpenWorldHint = false
         )]
-        [McpPluginSkillDescription("Inspect a `UnityEngine.ParticleSystem` component on a GameObject — runtime state " +
+        [AiSkillDescription("Inspect a `UnityEngine.ParticleSystem` component on a GameObject — runtime state " +
             "(playing/paused/emitting/stopped, particle count, time) plus opt-in serialized data for any of the " +
             "~24 particle modules (Main, Emission, Shape, Velocity, Noise, Collision, Trails, Renderer, etc.). " +
             "Pair with '" + ParticleSystemModifyToolId + "' to write changes back.")]
-        [McpPluginSkillBody("Inspect a `UnityEngine.ParticleSystem` component on a GameObject. Returns runtime state " +
+        [AiSkillBody("Inspect a `UnityEngine.ParticleSystem` component on a GameObject. Returns runtime state " +
             "(`isPlaying`, `isPaused`, `isEmitting`, `isStopped`, `particleCount`, `time`) plus opt-in serialized data " +
             "for any of the particle modules. Use '" + ParticleSystemModifyToolId + "' afterwards to write changes back.\n\n" +
             "## Inputs\n\n" +
