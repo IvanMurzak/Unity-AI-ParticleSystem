@@ -5,7 +5,7 @@
 ```
 Unity-AI-ParticleSystem/
 ├── Unity-Package/          # Main Unity project containing the UPM package
-│   └── Assets/root/        # The actual package contents (published to OpenUPM)
+│   └── Packages/com.ivanmurzak.unity.mcp.particlesystem/        # The actual package contents (published to OpenUPM)
 │       ├── Editor/Scripts/
 │       │   ├── Tools/      # MCP tool implementations (partial classes)
 │       │   └── Data/       # Response/data models
@@ -41,7 +41,7 @@ The package depends on `com.ivanmurzak.unity.mcp` (the Unity-MCP platform). To u
 
 ## Tests
 
-Tests are Unity NUnit tests under `Unity-Package/Assets/root/Tests/Editor/`. They use `[UnityTest]` (coroutines) and inherit from `BaseTest`, which provides:
+Tests are Unity NUnit tests under `Unity-Package/Packages/com.ivanmurzak.unity.mcp.particlesystem/Tests/Editor/`. They use `[UnityTest]` (coroutines) and inherit from `BaseTest`, which provides:
 - `CreateGameObjectWithParticleSystem(name)` — creates a test GameObject with a ParticleSystem
 - `RunToolAllowWarnings(toolName, json)` — invokes a tool via JSON and asserts no errors
 
