@@ -23,7 +23,7 @@ npm adduser
 
 ### Deploy
 
-⚠️ Make sure you done editing `package.json` and files in `Assets/root` folder. Because it is going to be public with no ability to discard it.
+⚠️ Make sure you done editing `package.json` and files in `Packages/com.ivanmurzak.unity.mcp.particlesystem` folder. Because it is going to be public with no ability to discard it.
 
 1. Increment `version` in `package.json` file
     > Any further updates should be done with incrementing package version.

@@ -6,7 +6,7 @@ Unity package `com.ivanmurzak.unity.mcp.particlesystem` exposing two MCP tools â
 
 ## Build / run
 
-- Package source: `Unity-Package/Assets/root/` (Editor + Runtime + Tests)
+- Package source: `Unity-Package/Packages/com.ivanmurzak.unity.mcp.particlesystem/` (Editor + Runtime + Tests)
 - Update Unity-MCP dependency: `.\commands\update-ai-game-developer.ps1` (`-WhatIf` to preview)
 - Bump version: `.\commands\bump-version.ps1 -NewVersion "x.y.z"` (`-WhatIf` to preview)
 - Tests run inside Unity Editor (NUnit + `[UnityTest]`); CI uses `game-ci/unity-test-runner@v4`.

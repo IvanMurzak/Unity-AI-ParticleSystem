@@ -47,7 +47,7 @@ Push-Location $repoRoot
 $ErrorActionPreference = "Stop"
 $PackageName = "com.ivanmurzak.unity.mcp"
 $ManifestPath = "Unity-Package/Packages/manifest.json"
-$PackageJsonPath = "Unity-Package/Assets/root/package.json"
+$PackageJsonPath = "Unity-Package/Packages/com.ivanmurzak.unity.mcp.particlesystem/package.json"
 $LocalFilePath = "file:./../../../../Unity-MCP/Unity-MCP-Plugin/Assets/root"
 
 function Write-ColorText {
