@@ -1,0 +1,23 @@
+"Installer/Assets/com.IvanMurzak/AI Particle System Installer/Installer.cs"
+  s_52bfd8633bca95::t_9c0f62a770e7d8 22
+Unity-Package/Packages/com.ivanmurzak.unity.mcp.particlesystem/package.json
+  s_52bfd8633bca95::t_728584ce426964 27,31
+Unity-Package/Packages/packages-lock.json
+  s_52bfd8633bca95::t_6abefdcf52228d 4
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.4",
+  "base_commit_sha": "38b43d423ddc288d6a65a41900e5c4887263a22f",
+  "prompts": {},
+  "sessions": {
+    "s_52bfd8633bca95": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "2d9bda5b-4e10-4c2c-a34a-3932ba4a1c0e",
+        "model": "claude-opus-4-8"
+      },
+      "human_author": "Ivan Murzak <Ivan.D.Murzak@gmail.com>"
+    }
+  }
+}
