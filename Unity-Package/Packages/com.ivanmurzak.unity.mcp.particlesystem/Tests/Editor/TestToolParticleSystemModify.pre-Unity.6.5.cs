@@ -9,7 +9,7 @@
 */
 
 #nullable enable
-#if UNITY_6000_5_OR_NEWER
+#if !UNITY_6000_5_OR_NEWER
 using System;
 using System.Collections;
 using com.IvanMurzak.ReflectorNet.Model;
@@ -49,7 +49,7 @@ namespace com.IvanMurzak.Unity.MCP.ParticleSystem.Editor.Tests
 
             var tool = new Tool_ParticleSystem();
             var result = tool.Modify(
-                gameObjectRef: new GameObjectRef(go.GetEntityId()),
+                gameObjectRef: new GameObjectRef(go.GetInstanceID()),
                 main: mainDiff
             );
 
@@ -82,7 +82,7 @@ namespace com.IvanMurzak.Unity.MCP.ParticleSystem.Editor.Tests
 
             var tool = new Tool_ParticleSystem();
             var result = tool.Modify(
-                gameObjectRef: new GameObjectRef(go.GetEntityId()),
+                gameObjectRef: new GameObjectRef(go.GetInstanceID()),
                 main: mainDiff
             );
 
@@ -116,7 +116,7 @@ namespace com.IvanMurzak.Unity.MCP.ParticleSystem.Editor.Tests
 
             var tool = new Tool_ParticleSystem();
             var result = tool.Modify(
-                gameObjectRef: new GameObjectRef(go.GetEntityId()),
+                gameObjectRef: new GameObjectRef(go.GetInstanceID()),
                 main: mainDiff
             );
 
@@ -150,7 +150,7 @@ namespace com.IvanMurzak.Unity.MCP.ParticleSystem.Editor.Tests
 
             var tool = new Tool_ParticleSystem();
             var result = tool.Modify(
-                gameObjectRef: new GameObjectRef(go.GetEntityId()),
+                gameObjectRef: new GameObjectRef(go.GetInstanceID()),
                 emission: emissionDiff
             );
 
@@ -184,7 +184,7 @@ namespace com.IvanMurzak.Unity.MCP.ParticleSystem.Editor.Tests
 
             var tool = new Tool_ParticleSystem();
             var result = tool.Modify(
-                gameObjectRef: new GameObjectRef(go.GetEntityId()),
+                gameObjectRef: new GameObjectRef(go.GetInstanceID()),
                 shape: shapeDiff
             );
 
@@ -217,7 +217,7 @@ namespace com.IvanMurzak.Unity.MCP.ParticleSystem.Editor.Tests
 
             var tool = new Tool_ParticleSystem();
             var result = tool.Modify(
-                gameObjectRef: new GameObjectRef(go.GetEntityId()),
+                gameObjectRef: new GameObjectRef(go.GetInstanceID()),
                 shape: shapeDiff
             );
 
@@ -250,7 +250,7 @@ namespace com.IvanMurzak.Unity.MCP.ParticleSystem.Editor.Tests
 
             var tool = new Tool_ParticleSystem();
             var result = tool.Modify(
-                gameObjectRef: new GameObjectRef(go.GetEntityId()),
+                gameObjectRef: new GameObjectRef(go.GetInstanceID()),
                 noise: noiseDiff
             );
 
@@ -283,7 +283,7 @@ namespace com.IvanMurzak.Unity.MCP.ParticleSystem.Editor.Tests
 
             var tool = new Tool_ParticleSystem();
             var result = tool.Modify(
-                gameObjectRef: new GameObjectRef(go.GetEntityId()),
+                gameObjectRef: new GameObjectRef(go.GetInstanceID()),
                 trails: trailsDiff
             );
 
@@ -341,7 +341,7 @@ namespace com.IvanMurzak.Unity.MCP.ParticleSystem.Editor.Tests
 
             var tool = new Tool_ParticleSystem();
             var result = tool.Modify(
-                gameObjectRef: new GameObjectRef(go.GetEntityId()),
+                gameObjectRef: new GameObjectRef(go.GetInstanceID()),
                 main: mainDiff,
                 shape: shapeDiff,
                 noise: noiseDiff
@@ -410,7 +410,7 @@ namespace com.IvanMurzak.Unity.MCP.ParticleSystem.Editor.Tests
 
             var tool = new Tool_ParticleSystem();
             var result = tool.Modify(
-                gameObjectRef: new GameObjectRef(go.GetEntityId()),
+                gameObjectRef: new GameObjectRef(go.GetInstanceID()),
                 main: mainDiff
             );
 
@@ -435,7 +435,7 @@ namespace com.IvanMurzak.Unity.MCP.ParticleSystem.Editor.Tests
 
             var json = $@"{{
                 ""gameObjectRef"": {{
-                    ""instanceID"": {go.GetEntityId()}
+                    ""instanceID"": {go.GetInstanceID()}
                 }},
                 ""main"": {{
                     ""typeName"": ""UnityEngine.ParticleSystem+MainModule"",
@@ -467,7 +467,7 @@ namespace com.IvanMurzak.Unity.MCP.ParticleSystem.Editor.Tests
 
             var json = $@"{{
                 ""gameObjectRef"": {{
-                    ""instanceID"": {go.GetEntityId()}
+                    ""instanceID"": {go.GetInstanceID()}
                 }},
                 ""main"": {{
                     ""typeName"": ""UnityEngine.ParticleSystem+MainModule"",
@@ -499,7 +499,7 @@ namespace com.IvanMurzak.Unity.MCP.ParticleSystem.Editor.Tests
 
             var json = $@"{{
                 ""gameObjectRef"": {{
-                    ""instanceID"": {go.GetEntityId()}
+                    ""instanceID"": {go.GetInstanceID()}
                 }},
                 ""shape"": {{
                     ""typeName"": ""UnityEngine.ParticleSystem+ShapeModule"",
@@ -529,7 +529,7 @@ namespace com.IvanMurzak.Unity.MCP.ParticleSystem.Editor.Tests
 
             var json = $@"{{
                 ""gameObjectRef"": {{
-                    ""instanceID"": {go.GetEntityId()}
+                    ""instanceID"": {go.GetInstanceID()}
                 }},
                 ""noise"": {{
                     ""typeName"": ""UnityEngine.ParticleSystem+NoiseModule"",
@@ -562,7 +562,7 @@ namespace com.IvanMurzak.Unity.MCP.ParticleSystem.Editor.Tests
 
             var json = $@"{{
                 ""gameObjectRef"": {{
-                    ""instanceID"": {go.GetEntityId()}
+                    ""instanceID"": {go.GetInstanceID()}
                 }},
                 ""main"": {{
                     ""typeName"": ""UnityEngine.ParticleSystem+MainModule"",

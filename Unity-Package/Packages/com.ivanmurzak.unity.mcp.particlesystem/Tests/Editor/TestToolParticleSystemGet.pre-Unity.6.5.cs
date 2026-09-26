@@ -9,7 +9,7 @@
 */
 
 #nullable enable
-#if UNITY_6000_5_OR_NEWER
+#if !UNITY_6000_5_OR_NEWER
 using System.Collections;
 using AIGD;
 using NUnit.Framework;
@@ -31,7 +31,7 @@ namespace com.IvanMurzak.Unity.MCP.ParticleSystem.Editor.Tests
 
             var tool = new Tool_ParticleSystem();
             var result = tool.Get(
-                gameObjectRef: new GameObjectRef(go.GetEntityId()),
+                gameObjectRef: new GameObjectRef(go.GetInstanceID()),
                 includeMain: true
             );
 
@@ -85,7 +85,7 @@ namespace com.IvanMurzak.Unity.MCP.ParticleSystem.Editor.Tests
 
             var tool = new Tool_ParticleSystem();
             var result = tool.Get(
-                gameObjectRef: new GameObjectRef(go.GetEntityId()),
+                gameObjectRef: new GameObjectRef(go.GetInstanceID()),
                 includeMain: false,
                 includeEmission: true
             );
@@ -104,7 +104,7 @@ namespace com.IvanMurzak.Unity.MCP.ParticleSystem.Editor.Tests
 
             var tool = new Tool_ParticleSystem();
             var result = tool.Get(
-                gameObjectRef: new GameObjectRef(go.GetEntityId()),
+                gameObjectRef: new GameObjectRef(go.GetInstanceID()),
                 includeMain: false,
                 includeShape: true
             );
@@ -123,7 +123,7 @@ namespace com.IvanMurzak.Unity.MCP.ParticleSystem.Editor.Tests
 
             var tool = new Tool_ParticleSystem();
             var result = tool.Get(
-                gameObjectRef: new GameObjectRef(go.GetEntityId()),
+                gameObjectRef: new GameObjectRef(go.GetInstanceID()),
                 includeMain: false,
                 includeColorOverLifetime: true
             );
@@ -141,7 +141,7 @@ namespace com.IvanMurzak.Unity.MCP.ParticleSystem.Editor.Tests
 
             var tool = new Tool_ParticleSystem();
             var result = tool.Get(
-                gameObjectRef: new GameObjectRef(go.GetEntityId()),
+                gameObjectRef: new GameObjectRef(go.GetInstanceID()),
                 includeMain: false,
                 includeNoise: true
             );
@@ -159,7 +159,7 @@ namespace com.IvanMurzak.Unity.MCP.ParticleSystem.Editor.Tests
 
             var tool = new Tool_ParticleSystem();
             var result = tool.Get(
-                gameObjectRef: new GameObjectRef(go.GetEntityId()),
+                gameObjectRef: new GameObjectRef(go.GetInstanceID()),
                 includeMain: false,
                 includeRenderer: true
             );
@@ -177,7 +177,7 @@ namespace com.IvanMurzak.Unity.MCP.ParticleSystem.Editor.Tests
 
             var tool = new Tool_ParticleSystem();
             var result = tool.Get(
-                gameObjectRef: new GameObjectRef(go.GetEntityId()),
+                gameObjectRef: new GameObjectRef(go.GetInstanceID()),
                 includeAll: true
             );
 
@@ -207,7 +207,7 @@ namespace com.IvanMurzak.Unity.MCP.ParticleSystem.Editor.Tests
 
             var tool = new Tool_ParticleSystem();
             var result = tool.Get(
-                gameObjectRef: new GameObjectRef(go.GetEntityId()),
+                gameObjectRef: new GameObjectRef(go.GetInstanceID()),
                 includeMain: true
             );
 
@@ -230,7 +230,7 @@ namespace com.IvanMurzak.Unity.MCP.ParticleSystem.Editor.Tests
 
             var json = $@"{{
                 ""gameObjectRef"": {{
-                    ""instanceID"": {go.GetEntityId()}
+                    ""instanceID"": {go.GetInstanceID()}
                 }},
                 ""includeMain"": true
             }}";
@@ -270,7 +270,7 @@ namespace com.IvanMurzak.Unity.MCP.ParticleSystem.Editor.Tests
 
             var json = $@"{{
                 ""gameObjectRef"": {{
-                    ""instanceID"": {go.GetEntityId()}
+                    ""instanceID"": {go.GetInstanceID()}
                 }},
                 ""includeMain"": true,
                 ""includeEmission"": true,
@@ -292,7 +292,7 @@ namespace com.IvanMurzak.Unity.MCP.ParticleSystem.Editor.Tests
 
             var json = $@"{{
                 ""gameObjectRef"": {{
-                    ""instanceID"": {go.GetEntityId()}
+                    ""instanceID"": {go.GetInstanceID()}
                 }},
                 ""includeAll"": true
             }}";
