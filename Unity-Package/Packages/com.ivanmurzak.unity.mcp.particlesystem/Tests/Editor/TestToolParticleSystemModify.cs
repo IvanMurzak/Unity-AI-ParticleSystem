@@ -435,7 +435,7 @@ namespace com.IvanMurzak.Unity.MCP.ParticleSystem.Editor.Tests
 
             var json = $@"{{
                 ""gameObjectRef"": {{
-                    ""instanceID"": {go.GetEntityId()}
+                    ""instanceID"": ""{UnityEngine.EntityId.ToULong(go.GetEntityId())}""
                 }},
                 ""main"": {{
                     ""typeName"": ""UnityEngine.ParticleSystem+MainModule"",
@@ -467,7 +467,7 @@ namespace com.IvanMurzak.Unity.MCP.ParticleSystem.Editor.Tests
 
             var json = $@"{{
                 ""gameObjectRef"": {{
-                    ""instanceID"": {go.GetEntityId()}
+                    ""instanceID"": ""{UnityEngine.EntityId.ToULong(go.GetEntityId())}""
                 }},
                 ""main"": {{
                     ""typeName"": ""UnityEngine.ParticleSystem+MainModule"",
@@ -499,7 +499,7 @@ namespace com.IvanMurzak.Unity.MCP.ParticleSystem.Editor.Tests
 
             var json = $@"{{
                 ""gameObjectRef"": {{
-                    ""instanceID"": {go.GetEntityId()}
+                    ""instanceID"": ""{UnityEngine.EntityId.ToULong(go.GetEntityId())}""
                 }},
                 ""shape"": {{
                     ""typeName"": ""UnityEngine.ParticleSystem+ShapeModule"",
@@ -529,7 +529,7 @@ namespace com.IvanMurzak.Unity.MCP.ParticleSystem.Editor.Tests
 
             var json = $@"{{
                 ""gameObjectRef"": {{
-                    ""instanceID"": {go.GetEntityId()}
+                    ""instanceID"": ""{UnityEngine.EntityId.ToULong(go.GetEntityId())}""
                 }},
                 ""noise"": {{
                     ""typeName"": ""UnityEngine.ParticleSystem+NoiseModule"",
@@ -562,7 +562,7 @@ namespace com.IvanMurzak.Unity.MCP.ParticleSystem.Editor.Tests
 
             var json = $@"{{
                 ""gameObjectRef"": {{
-                    ""instanceID"": {go.GetEntityId()}
+                    ""instanceID"": ""{UnityEngine.EntityId.ToULong(go.GetEntityId())}""
                 }},
                 ""main"": {{
                     ""typeName"": ""UnityEngine.ParticleSystem+MainModule"",
