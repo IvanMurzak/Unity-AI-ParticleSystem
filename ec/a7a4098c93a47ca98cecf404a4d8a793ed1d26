@@ -1,0 +1,21 @@
+Unity-Package/Packages/com.ivanmurzak.unity.mcp.particlesystem/Tests/Editor/TestToolParticleSystemGet.cs
+  s_a39b341ac2297e::t_2b6ef9e1eb0aca 233,273,295
+Unity-Package/Packages/com.ivanmurzak.unity.mcp.particlesystem/Tests/Editor/TestToolParticleSystemModify.cs
+  s_a39b341ac2297e::t_eaef72b5b69250 438,470,502,532,565
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.4",
+  "base_commit_sha": "eca7a4098c93a47ca98cecf404a4d8a793ed1d26",
+  "prompts": {},
+  "sessions": {
+    "s_a39b341ac2297e": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "s_a39b341ac2297e",
+        "model": "unknown"
+      },
+      "human_author": "Ivan Murzak <Ivan.D.Murzak@gmail.com>"
+    }
+  }
+}
