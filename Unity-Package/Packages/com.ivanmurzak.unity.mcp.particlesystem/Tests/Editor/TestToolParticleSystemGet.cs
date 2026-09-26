@@ -230,7 +230,7 @@ namespace com.IvanMurzak.Unity.MCP.ParticleSystem.Editor.Tests
 
             var json = $@"{{
                 ""gameObjectRef"": {{
-                    ""instanceID"": {go.GetEntityId()}
+                    ""instanceID"": ""{UnityEngine.EntityId.ToULong(go.GetEntityId())}""
                 }},
                 ""includeMain"": true
             }}";
@@ -270,7 +270,7 @@ namespace com.IvanMurzak.Unity.MCP.ParticleSystem.Editor.Tests
 
             var json = $@"{{
                 ""gameObjectRef"": {{
-                    ""instanceID"": {go.GetEntityId()}
+                    ""instanceID"": ""{UnityEngine.EntityId.ToULong(go.GetEntityId())}""
                 }},
                 ""includeMain"": true,
                 ""includeEmission"": true,
@@ -292,7 +292,7 @@ namespace com.IvanMurzak.Unity.MCP.ParticleSystem.Editor.Tests
 
             var json = $@"{{
                 ""gameObjectRef"": {{
-                    ""instanceID"": {go.GetEntityId()}
+                    ""instanceID"": ""{UnityEngine.EntityId.ToULong(go.GetEntityId())}""
                 }},
                 ""includeAll"": true
             }}";
