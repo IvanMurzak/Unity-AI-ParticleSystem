@@ -47,8 +47,7 @@ maintainer-applied `ci-ok` label and abort if the PR touches `.github/workflows/
 
 - **Main thread only.** Every Unity API call inside a tool MUST be wrapped in
   `MainThread.Instance.Run(() => { ... })` — MCP calls arrive off the main thread; only argument validation
-  runs outside. ReflectorNet calls (`reflector.Serialize`, `TryModify`) touch Unity objects and must run
-  inside it too.
+  runs outside. So must ReflectorNet calls (`reflector.Serialize`, `TryModify`).
 - **Tool shape.** `[AiToolType] partial class Tool_ParticleSystem` (namespace
   `com.IvanMurzak.Unity.MCP.ParticleSystem.Editor`), one operation per file: `ParticleSystem.cs` (bare class),
   `ParticleSystem.Get.cs`, `ParticleSystem.Modify.cs`. Each tool method carries `[AiTool(<id>, …)]`,
