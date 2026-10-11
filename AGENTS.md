@@ -17,12 +17,12 @@ generated from `Unity-AI-Tools-Template`; the user-facing tool list is in `READM
   - `Tests/Editor/` (EditMode; `BaseTest` provides `CreateGameObjectWithParticleSystem` and
     `RunToolAllowWarnings`) and `Tests/Runtime/` (PlayMode).
 - `Unity-Tests/<unity-version>/` — one test project per supported Unity version, consuming the package via
-  `file:`. A new version must also be added to `test_pull_request.yml`, `release.yml` and
-  `open-all-projects-*`.
+  `file:`. A new version must also be added to `test_pull_request.yml` and `release.yml` (and
+  `open-all-projects-*`).
 - `Installer/` — Unity project that exports the `.unitypackage` installer
   (`Assets/com.IvanMurzak/<name> Installer/`).
-- `commands/` — the scripts below, plus `open-all-projects-unix.sh` and `check-versions.py` (synced in by the
-  release cascade — do not hand-edit; CI runs it as the `version-consistency` gate).
+- `commands/` — PowerShell helpers (below) and `check-versions.py` (synced in by the release cascade — do not
+  hand-edit; CI runs it as the `version-consistency` gate).
 - `.github/workflows/` — `test_pull_request.yml` (PR test matrix), `test_unity_plugin.yml` (reusable test
   job), `release.yml`, `bump_version.yml`, `claude.yml` (`@claude` mentions).
 - `docs/` — user docs: `Deploy-{OpenUPM,GitHub,npmjs}.md`, `Manual-Package-Rename.md`, `openupm-signing.md`,
@@ -34,7 +34,8 @@ generated from `Unity-AI-Tools-Template`; the user-facing tool list is in `READM
 ./commands/bump-version.ps1 -NewVersion "x.y.z"   # package.json + Installer.cs in lock-step; -WhatIf to preview
 ./commands/get-version.ps1
 ./commands/update-ai-game-developer.ps1           # bump the com.ivanmurzak.unity.mcp pin; -WhatIf to preview
-./commands/open-all-projects-windows.ps1          # open the Unity projects (generates .meta files)
+./commands/open-all-projects-windows.ps1          # open all Unity projects (or -unix.sh)
+./commands/use-local-mcp.ps1 [-Local|-Remote]      # point the Unity-MCP dep at a local checkout / back to OpenUPM
 ```
 
 Tests run inside the Unity Editor (NUnit + `[UnityTest]`); CI runs them with `game-ci/unity-test-runner` in
