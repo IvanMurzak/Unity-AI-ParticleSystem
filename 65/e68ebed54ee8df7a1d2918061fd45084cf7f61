@@ -1,0 +1,25 @@
+Unity-Package/Assets/root/Editor/Scripts/Tools/ParticleSystem.Get.cs
+  s_254b2884855a96::t_49055b4711e8b7 36-62
+Unity-Package/Assets/root/Editor/Scripts/Tools/ParticleSystem.Modify.cs
+  s_254b2884855a96::t_5e7d4b57bd4b16 40-61
+Unity-Package/Assets/root/package.json
+  s_254b2884855a96::t_c5a98478dff83c 31
+Unity-Package/Packages/manifest.json
+  s_254b2884855a96::t_7b68ad3a10674f 3
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.4.10",
+  "base_commit_sha": "65e68ebed54ee8df7a1d2918061fd45084cf7f61",
+  "prompts": {},
+  "sessions": {
+    "s_254b2884855a96": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "d643efd7-8f16-4f40-9b01-f9eefe3fa842",
+        "model": "claude-opus-4-7"
+      },
+      "human_author": "Ivan Murzak <Ivan.D.Murzak@gmail.com>"
+    }
+  }
+}

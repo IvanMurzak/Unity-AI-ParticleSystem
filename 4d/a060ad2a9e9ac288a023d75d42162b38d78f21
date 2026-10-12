@@ -1,0 +1,25 @@
+Unity-Package/Assets/Plugins/NuGet/.nuget-installed.json
+  s_86d43127ecb2c1::t_046a5f61d7ab77 4,10
+Unity-Tests/2022.3.62f3/Assets/Plugins/NuGet/.nuget-installed.json
+  s_86d43127ecb2c1::t_9e4798354887ff 4,10
+Unity-Tests/2023.2.22f1/Assets/Plugins/NuGet/.nuget-installed.json
+  s_86d43127ecb2c1::t_75938825ca6d1a 4,10
+Unity-Tests/6000.3.1f1/Assets/Plugins/NuGet/.nuget-installed.json
+  s_86d43127ecb2c1::t_4e9f3a23c45ed8 4,10
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.22",
+  "base_commit_sha": "4da060ad2a9e9ac288a023d75d42162b38d78f21",
+  "prompts": {},
+  "sessions": {
+    "s_86d43127ecb2c1": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "d09f2421-e797-40e2-a0e3-08c445e1a707",
+        "model": "claude-opus-5"
+      },
+      "human_author": "Ivan Murzak <Ivan.D.Murzak@gmail.com>"
+    }
+  }
+}
