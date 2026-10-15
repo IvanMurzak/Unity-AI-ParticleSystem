@@ -17,12 +17,12 @@ namespace com.IvanMurzak.Unity.MCP.Editor.Rql.Particles
     using ParticleSystem = UnityEngine.ParticleSystem;
 
     /// <summary>ParticleSystem: playback in the Editor (Play / Pause / Stop / Clear / Simulate); modules are members.</summary>
-    public sealed class UnityEngine_ParticleSystem_Adapter : RqlTypeAdapter<UnityEngine.ParticleSystem>
+    public sealed class UnityEngine_ParticleSystem_Adapter : RqlTypeAdapter<ParticleSystem>
     {
         public override string Description =>
             "ParticleSystem: modules main / emission / shape / … are writable members; call Play() / Pause() / Stop() / Clear() / Simulate(seconds)";
 
-        protected override void Members(MemberTable<UnityEngine.ParticleSystem> m) =>
+        protected override void Members(MemberTable<ParticleSystem> m) =>
             m.Method("Play", ps => ps.Play(true), "start emitting (children included)")
              .Method("Pause", ps => ps.Pause(true), "pause the simulation")
              .Method("Stop", ps => ps.Stop(true, ParticleSystemStopBehavior.StopEmitting), "stop emitting; live particles finish")

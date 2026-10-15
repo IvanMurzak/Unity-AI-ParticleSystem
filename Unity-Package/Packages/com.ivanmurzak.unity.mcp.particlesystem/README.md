@@ -33,12 +33,20 @@ AI-powered tools for Unity ParticleSystem workflow. Inspect and modify ParticleS
 | 2023.2.22f1   | [![r](https://github.com/IvanMurzak/Unity-AI-ParticleSystem/workflows/release/badge.svg?job=test-unity-2023-2-22f1-editmode)](https://github.com/IvanMurzak/Unity-AI-ParticleSystem/actions/workflows/release.yml) | [![r](https://github.com/IvanMurzak/Unity-AI-ParticleSystem/workflows/release/badge.svg?job=test-unity-2023-2-22f1-playmode)](https://github.com/IvanMurzak/Unity-AI-ParticleSystem/actions/workflows/release.yml) | [![r](https://github.com/IvanMurzak/Unity-AI-ParticleSystem/workflows/release/badge.svg?job=test-unity-2023-2-22f1-standalone)](https://github.com/IvanMurzak/Unity-AI-ParticleSystem/actions/workflows/release.yml) |
 | 6000.3.1f1    | [![r](https://github.com/IvanMurzak/Unity-AI-ParticleSystem/workflows/release/badge.svg?job=test-unity-6000-3-1f1-editmode)](https://github.com/IvanMurzak/Unity-AI-ParticleSystem/actions/workflows/release.yml)  | [![r](https://github.com/IvanMurzak/Unity-AI-ParticleSystem/workflows/release/badge.svg?job=test-unity-6000-3-1f1-playmode)](https://github.com/IvanMurzak/Unity-AI-ParticleSystem/actions/workflows/release.yml)  | [![r](https://github.com/IvanMurzak/Unity-AI-ParticleSystem/workflows/release/badge.svg?job=test-unity-6000-3-1f1-standalone)](https://github.com/IvanMurzak/Unity-AI-ParticleSystem/actions/workflows/release.yml)  |
 
-## AI Particle System Tools
+## RQL (no extension tools)
 
-ParticleSystem tools:
+This package adds no MCP tools: it contributes an RQL module, so agents use `rql-query` / `rql-mutate` (the `unity-rql`
+skill carries the full "Particle systems" guide with examples). `P` below stands for
+`objects | get components | where $ is ParticleSystem`.
 
-- `particle-system-get` - Get ParticleSystem component data (state, modules, renderer settings)
-- `particle-system-modify` - Modify ParticleSystem component (update any module properties)
+| Former tool | RQL |
+| --- | --- |
+| `particle-system-get` | `P \| select main.duration main.startLifetime emission.rateOverTime shape.shapeType` (any module member) |
+| `particle-system-modify` | `P \| set main.startLifetime = 3, emission.rateOverTime = [5, 25], main.startColor = "#ff8800"` |
+
+Module structs (`main`, `emission`, `shape` …) are written through; `MinMaxCurve` takes a number or `[min, max]`,
+`MinMaxGradient` a color, `[color, color]` or gradient keys. Playback: `P \| call Play()` (also `Pause`, `Stop`, `Clear`,
+`Simulate(seconds)`).
 
 Supported modules (24 total):
 
